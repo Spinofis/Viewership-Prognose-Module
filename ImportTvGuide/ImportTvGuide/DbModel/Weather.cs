@@ -13,8 +13,6 @@ namespace ImportTvGuide.DbModel
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int we_id { get; set; }
 
-        public int we_da_id { get; set; }
-
         public int we_temperature { get; set; }
 
         public DateTime aud_data { get; set; }

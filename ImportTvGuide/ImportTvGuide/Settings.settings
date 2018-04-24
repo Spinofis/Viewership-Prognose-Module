@@ -6,10 +6,10 @@
       <Value Profile="(Default)">https://www.telemagazyn.pl/?dostawca=wszystkie&amp;dzien=2016-04-16#programTV</Value>
     </Setting>
     <Setting Name="TimeRegex" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">mainCell.*\n+\s+.*\n+\s+&lt;span class="left"&gt;([0-9]{1,2}:[0-9]{1,2})</Value>
+      <Value Profile="(Default)">&lt;span&gt;Gatunek: &lt;/span&gt;&lt;meta itemprop="genre" content="Program tv"&gt;(.*)\s+&lt;/li&gt;</Value>
     </Setting>
     <Setting Name="NameRegex" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">mainCell.*\n+\s+.*\n+\s+&lt;span class="left"&gt;[0-9]{1,2}:[0-9]{1,2}.*\n+\s+.*\n+\s+(.*)</Value>
+      <Value Profile="(Default)">&lt;span&gt;.*</Value>
     </Setting>
     <Setting Name="TypeRegex" Type="System.String" Scope="Application">
       <Value Profile="(Default)">mainCell.*\n+\s+.*\n+\s+&lt;span class="left"&gt;[0-9]{1,2}:[0-9]{1,2}.*\n+\s+.*\n+\s+.*\n+\s+&lt;span class="info"&gt;(.*)</Value>
@@ -20,8 +20,8 @@
     <Setting Name="EndDate" Type="System.String" Scope="User">
       <Value Profile="(Default)">2016-04-20</Value>
     </Setting>
-    <Setting Name="StationOnPage" Type="System.String" Scope="User">
-      <Value Profile="(Default)">3</Value>
+    <Setting Name="StationId" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
     </Setting>
   </Settings>
 </SettingsFile>

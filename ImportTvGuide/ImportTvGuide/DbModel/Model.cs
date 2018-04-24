@@ -12,8 +12,10 @@ namespace ImportTvGuide.DbModel
         {
         }
 
+        public virtual DbSet<C__MigrationHistory> C__MigrationHistory { get; set; }
         public virtual DbSet<Program_type> Program_type { get; set; }
         public virtual DbSet<ProgramTV> ProgramTV { get; set; }
+        public virtual DbSet<Station> Station { get; set; }
         public virtual DbSet<Weather> Weather { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -22,15 +24,19 @@ namespace ImportTvGuide.DbModel
                 .Property(e => e.prt_name)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Program_type>()
-                .HasMany(e => e.ProgramTV)
-                .WithRequired(e => e.Program_type)
-                .HasForeignKey(e => e.pr_prt_id)
-                .WillCascadeOnDelete(false);
-
             modelBuilder.Entity<ProgramTV>()
                 .Property(e => e.pr_name)
                 .IsUnicode(false);
+
+            modelBuilder.Entity<Station>()
+                .Property(e => e.sta_name)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Station>()
+                .HasMany(e => e.ProgramTV)
+                .WithRequired(e => e.Station)
+                .HasForeignKey(e => e.pr_sta_id)
+                .WillCascadeOnDelete(false);
         }
     }
 }

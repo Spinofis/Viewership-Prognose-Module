@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using ImportTvGuide.DtoModel;
 using ImportTvGuide.DbModel;
 using System;
 using System.Collections.Generic;
@@ -17,9 +16,9 @@ namespace ImportTvGuide
         {
             Mapper.Initialize(cfg =>
             {
-                cfg.CreateMap<ProgramTV, ProgramTvDTO>();
-                cfg.CreateMap<Program_type, Program_typeDTO>();
-                cfg.CreateMap<Weather, WeatherDTO>();
+                //cfg.CreateMap<ProgramTV, ProgramTvDTO>();
+                //cfg.CreateMap<Program_type, Program_typeDTO>();
+                //cfg.CreateMap<Weather, WeatherDTO>();
             });
         }
     }

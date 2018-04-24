@@ -34,7 +34,7 @@ namespace ImportTvGuide {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("mainCell.*\\n+\\s+.*\\n+\\s+<span class=\"left\">([0-9]{1,2}:[0-9]{1,2})")]
+        [global::System.Configuration.DefaultSettingValueAttribute("<span>Gatunek: </span><meta itemprop=\"genre\" content=\"Program tv\">(.*)\\s+</li>")]
         public string TimeRegex {
             get {
                 return ((string)(this["TimeRegex"]));
@@ -43,8 +43,7 @@ namespace ImportTvGuide {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("mainCell.*\\n+\\s+.*\\n+\\s+<span class=\"left\">[0-9]{1,2}:[0-9]{1,2}.*\\n+\\s+.*\\n+\\s+(" +
-            ".*)")]
+        [global::System.Configuration.DefaultSettingValueAttribute("<span>.*")]
         public string NameRegex {
             get {
                 return ((string)(this["NameRegex"]));
@@ -84,13 +83,13 @@ namespace ImportTvGuide {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("3")]
-        public string StationOnPage {
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        public int StationId {
             get {
-                return ((string)(this["StationOnPage"]));
+                return ((int)(this["StationId"]));
             }
             set {
-                this["StationOnPage"] = value;
+                this["StationId"] = value;
             }
         }
     }

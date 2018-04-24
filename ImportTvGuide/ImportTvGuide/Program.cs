@@ -13,7 +13,7 @@ namespace ImportTvGuide
         static void Main(string[] args)
         {
             AutoMapperInitializer.InitializeMapping();
-            TvGuideParser.GetTvGuide();
+           
         }
     }
 }

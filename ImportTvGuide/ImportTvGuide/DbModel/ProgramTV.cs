@@ -13,8 +13,6 @@ namespace ImportTvGuide.DbModel
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int pr_id { get; set; }
 
-        public int pr_da_id { get; set; }
-
         public int pr_prt_id { get; set; }
 
         [Required]
@@ -23,10 +21,12 @@ namespace ImportTvGuide.DbModel
 
         public DateTime aud_data { get; set; }
 
-        public DateTime we_start_date { get; set; }
+        public DateTime pr_start_date { get; set; }
 
-        public DateTime we_end_date { get; set; }
+        public DateTime pr_end_date { get; set; }
 
-        public virtual Program_type Program_type { get; set; }
+        public int pr_sta_id { get; set; }
+
+        public virtual Station Station { get; set; }
     }
 }

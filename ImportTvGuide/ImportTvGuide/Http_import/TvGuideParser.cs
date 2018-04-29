@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DatabaseProject.DbLogic;
+using DatabaseProject.DtoModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +12,88 @@ namespace ImportTvGuide.Http_import
 {
     public static class TvGuideParser
     {
+        private static ICollection<ProgramTypeDTO> programTypes;
+        public static void GetProgramTypes()
+        {
+            DbLogic dbLogic = new DbLogic();
+            programTypes = dbLogic.GetProgramTypes();
+            ICollection<ProgramTvDTO> programList = new List<ProgramTvDTO>();
+
+            for (DateTime currentDate = Settings.Default.StartDate; currentDate <= Settings.Default.EndDate; currentDate.AddDays(1))
+            {
+                string currentDateString;
+                string nextDateString;
+                string guideUrl = Settings.Default.TvGuideURL;
+                string html = HtmlImporter.GetHtml(guideUrl);
+                string htmlNextDay;
+                Regex regex = new Regex(Settings.Default.DetailLink);
+                MatchCollection detailLinks = regex.Matches(html);
+                regex = new Regex(Settings.Default.TimeStartRegex);
+                MatchCollection timesStart = regex.Matches(html);
+                for (int i = 1; i < detailLinks.Count; i++)
+                {
+                    string htmlDetail = HtmlImporter.GetHtml(Settings.Default.BaseUrl + detailLinks[i].Result("$2"));
+                    regex = new Regex(Settings.Default.TypeRegex);
+                    ProgramTypeDTO programType = new ProgramTypeDTO();
+                    Match type = regex.Match(htmlDetail);
+                    programType.Name = type.Result("$1");
+                    if (!programTypes.Select(x => x.Name).Contains(programType.Name))
+                    {
+                        programType = dbLogic.SaveProgramType(programType);
+                        programTypes.Add(programType);
+                    }
+
+                    ProgramTvDTO programTv = new ProgramTvDTO();
+                    programTv.Station = new StationDTO() { Id = Settings.Default.StationId };
+                    programTv.Type = programType;
+                    string startTimeString = timesStart[i].Result("$1");
+                    TimeSpan startProgramTimeSpan = TimeSpan.Parse(startTimeString);
+                    TimeSpan endProgramTimeSpan;
+                    if (i + 1 < detailLinks.Count)
+                        endProgramTimeSpan = TimeSpan.Parse(timesStart[i + 1].Result("$1"));
+                    else
+                    {
+                        currentDateString = currentDate.Date.ToString("yyyy-MM-dd");
+                        nextDateString = currentDate.AddDays(1).Date.ToString("yyyy-MM-dd");
+                        guideUrl = guideUrl.Replace(currentDateString, nextDateString);
+                        htmlNextDay = HtmlImporter.GetHtml(guideUrl);
+                        regex = new Regex(Settings.Default.TimeStartRegex);
+                        endProgramTimeSpan = TimeSpan.Parse(regex.Matches(htmlNextDay)[1].Result("$1"));
+                    }
+                    DateTime startProgramDate, endProgramDate, startAdvertDate, endAdvertDate;
+
+                    if (Math.Abs(new TimeSpan(23, 59, 59).Subtract(startProgramTimeSpan).Hours) > 12)
+                        startProgramDate = currentDate.AddDays(1).Add(startProgramTimeSpan);
+                    else
+                        startProgramDate = currentDate.Add(startProgramTimeSpan);
+
+                    regex = new Regex(Settings.Default.DurationRegex);
+                    int duration = Int32.Parse(regex.Match(htmlDetail).Result("$1"));
+
+                    if (Math.Abs(new TimeSpan(23, 59, 59).Subtract(endProgramTimeSpan).Hours) > 12)
+                        endProgramDate = currentDate.AddDays(1).Add(endProgramTimeSpan);
+                    else
+                        endProgramDate = currentDate.Add(endProgramTimeSpan);
+
+                    if (duration > 0)
+                    {
+                        endAdvertDate = endProgramDate;
+                        endProgramDate.Date.Add(startProgramTimeSpan).AddMinutes(duration);
+                        startAdvertDate = startProgramDate.AddMinutes(duration);
+                        ProgramTvDTO advert = new ProgramTvDTO();
+                        advert.StartDate = startAdvertDate;
+                        advert.EndDate = endAdvertDate;
+                        advert.Type = programTypes.Where(x => x.Id == 1).First();
+                        advert.Station = new StationDTO() { Id = Settings.Default.StationId };
+                        programList.Add(advert);
+                    }
+
+                    programTv.StartDate = startProgramDate;
+                    programTv.EndDate = endProgramDate;
+                    programList.Add(programTv);
+                }
+            }
+        }
 
 
         //public static ICollection<ProgramTvDTO> GetTvGuide()

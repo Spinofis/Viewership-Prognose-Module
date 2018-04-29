@@ -3,25 +3,34 @@
   <Profiles />
   <Settings>
     <Setting Name="TvGuideURL" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">https://www.telemagazyn.pl/?dostawca=wszystkie&amp;dzien=2016-04-16#programTV</Value>
+      <Value Profile="(Default)">https://www.telemagazyn.pl/tvp_1/?dzien=2018-04-27#program</Value>
     </Setting>
-    <Setting Name="TimeRegex" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">&lt;span&gt;Gatunek: &lt;/span&gt;&lt;meta itemprop="genre" content="Program tv"&gt;(.*)\s+&lt;/li&gt;</Value>
+    <Setting Name="TimeStartRegex" Type="System.String" Scope="Application">
+      <Value Profile="(Default)"> &lt;span&gt;.*\n\s+&lt;em&gt;\s+([0-9]{1,2}:[0-9]{1,2})</Value>
     </Setting>
     <Setting Name="NameRegex" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">&lt;span&gt;.*</Value>
+      <Value Profile="(Default)">&lt;meta name="keywords" content="(.*?),</Value>
     </Setting>
     <Setting Name="TypeRegex" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">mainCell.*\n+\s+.*\n+\s+&lt;span class="left"&gt;[0-9]{1,2}:[0-9]{1,2}.*\n+\s+.*\n+\s+.*\n+\s+&lt;span class="info"&gt;(.*)</Value>
+      <Value Profile="(Default)">"genre" content="(.*?)"</Value>
     </Setting>
-    <Setting Name="StartDate" Type="System.String" Scope="Application">
+    <Setting Name="StartDate" Type="System.DateTime" Scope="Application">
       <Value Profile="(Default)">2016-04-16</Value>
     </Setting>
-    <Setting Name="EndDate" Type="System.String" Scope="User">
+    <Setting Name="EndDate" Type="System.DateTime" Scope="Application">
       <Value Profile="(Default)">2016-04-20</Value>
     </Setting>
-    <Setting Name="StationId" Type="System.Int32" Scope="User">
+    <Setting Name="StationId" Type="System.Int32" Scope="Application">
       <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="DurationRegex" Type="System.String" Scope="Application">
+      <Value Profile="(Default)"> &lt;span&gt;Czas trwania: &lt;/span&gt;&lt;meta itemprop="timeRequired" content="([0-9]*)</Value>
+    </Setting>
+    <Setting Name="DetailLink" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">&lt;li class="(.*?)"&gt;.*\n\s+&lt;a href="(.*?)"</Value>
+    </Setting>
+    <Setting Name="BaseUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://www.telemagazyn.pl</Value>
     </Setting>
   </Settings>
 </SettingsFile>

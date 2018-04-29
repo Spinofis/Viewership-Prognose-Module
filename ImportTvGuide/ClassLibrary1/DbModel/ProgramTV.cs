@@ -1,4 +1,4 @@
-namespace ImportTvGuide.DbModel
+namespace DatabaseProject.DbModel
 {
     using System;
     using System.Collections.Generic;
@@ -13,8 +13,6 @@ namespace ImportTvGuide.DbModel
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int pr_id { get; set; }
 
-        public int pr_prt_id { get; set; }
-
         [Required]
         [StringLength(200)]
         public string pr_name { get; set; }
@@ -26,6 +24,10 @@ namespace ImportTvGuide.DbModel
         public DateTime pr_end_date { get; set; }
 
         public int pr_sta_id { get; set; }
+
+        public int pr_prt_id { get; set; }
+
+        public virtual Program_type Program_type { get; set; }
 
         public virtual Station Station { get; set; }
     }

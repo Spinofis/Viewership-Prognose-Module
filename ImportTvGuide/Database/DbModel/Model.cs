@@ -1,4 +1,4 @@
-namespace ImportTvGuide.DbModel
+namespace DatabaseProject.DbModel
 {
     using System;
     using System.Data.Entity;

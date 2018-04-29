@@ -1,4 +1,4 @@
-namespace ImportTvGuide.DbModel
+namespace DatabaseProject.DbModel
 {
     using System;
     using System.Collections.Generic;
@@ -6,20 +6,20 @@ namespace ImportTvGuide.DbModel
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("Station")]
-    public partial class Station
+    public partial class Program_type
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Station()
+        public Program_type()
         {
             ProgramTV = new HashSet<ProgramTV>();
         }
 
         [Key]
-        public int sta_id { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int prt_id { get; set; }
 
         [Required]
-        public string sta_name { get; set; }
+        public string prt_name { get; set; }
 
         public DateTime aud_data { get; set; }
 

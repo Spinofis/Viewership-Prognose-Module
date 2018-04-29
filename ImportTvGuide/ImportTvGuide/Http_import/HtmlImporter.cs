@@ -10,16 +10,9 @@ namespace ImportTvGuide.Http_import
 {
     public static class HtmlImporter
     {
-
-        public static string GetImportTvGuide(string url)
+        public static string GetHtml(string url)
         {
             WebRequest webRequest = WebRequest.Create(url);
-            return GetHtml(webRequest);
-        }
-
-        private static string GetHtml(WebRequest webRequest)
-        {
-
             WebResponse webResponse = webRequest.GetResponse();
             Stream contentStream = webResponse.GetResponseStream();
             string html = String.Empty;

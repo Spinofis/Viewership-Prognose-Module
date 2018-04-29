@@ -1,12 +1,12 @@
 ﻿using AutoMapper;
-using ImportTvGuide.DbModel;
+using DatabaseProject.DbModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ImportTvGuide
+namespace DatabaseProject
 {
     public static class AutoMapperInitializer
     {

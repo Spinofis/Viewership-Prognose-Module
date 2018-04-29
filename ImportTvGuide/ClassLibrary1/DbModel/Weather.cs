@@ -1,4 +1,4 @@
-namespace ImportTvGuide.DbModel
+namespace DatabaseProject.DbModel
 {
     using System;
     using System.Collections.Generic;
@@ -6,15 +6,21 @@ namespace ImportTvGuide.DbModel
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class Program_type
+    [Table("Weather")]
+    public partial class Weather
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int prt_id { get; set; }
+        public int we_id { get; set; }
 
-        [Required]
-        public string prt_name { get; set; }
+        public int we_temperature { get; set; }
 
         public DateTime aud_data { get; set; }
+
+        public int? we_wind_speed { get; set; }
+
+        public DateTime we_start_date { get; set; }
+
+        public DateTime we_end_date { get; set; }
     }
 }

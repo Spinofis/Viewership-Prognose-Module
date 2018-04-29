@@ -25,7 +25,7 @@ namespace ImportTvGuide {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://www.telemagazyn.pl/?dostawca=wszystkie&dzien=2016-04-16#programTV")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://www.telemagazyn.pl/tvp_1/?dzien=2018-04-27#program")]
         public string TvGuideURL {
             get {
                 return ((string)(this["TvGuideURL"]));
@@ -34,16 +34,16 @@ namespace ImportTvGuide {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("<span>Gatunek: </span><meta itemprop=\"genre\" content=\"Program tv\">(.*)\\s+</li>")]
-        public string TimeRegex {
+        [global::System.Configuration.DefaultSettingValueAttribute(" <span>.*\\n\\s+<em>\\s+([0-9]{1,2}:[0-9]{1,2})")]
+        public string TimeStartRegex {
             get {
-                return ((string)(this["TimeRegex"]));
+                return ((string)(this["TimeStartRegex"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("<span>.*")]
+        [global::System.Configuration.DefaultSettingValueAttribute("<meta name=\"keywords\" content=\"(.*?),")]
         public string NameRegex {
             get {
                 return ((string)(this["NameRegex"]));
@@ -52,8 +52,7 @@ namespace ImportTvGuide {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("mainCell.*\\n+\\s+.*\\n+\\s+<span class=\"left\">[0-9]{1,2}:[0-9]{1,2}.*\\n+\\s+.*\\n+\\s+." +
-            "*\\n+\\s+<span class=\"info\">(.*)")]
+        [global::System.Configuration.DefaultSettingValueAttribute("\"genre\" content=\"(.*?)\"")]
         public string TypeRegex {
             get {
                 return ((string)(this["TypeRegex"]));
@@ -63,33 +62,54 @@ namespace ImportTvGuide {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("2016-04-16")]
-        public string StartDate {
+        public global::System.DateTime StartDate {
             get {
-                return ((string)(this["StartDate"]));
+                return ((global::System.DateTime)(this["StartDate"]));
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("2016-04-20")]
-        public string EndDate {
+        public global::System.DateTime EndDate {
             get {
-                return ((string)(this["EndDate"]));
-            }
-            set {
-                this["EndDate"] = value;
+                return ((global::System.DateTime)(this["EndDate"]));
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
         public int StationId {
             get {
                 return ((int)(this["StationId"]));
             }
-            set {
-                this["StationId"] = value;
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute(" <span>Czas trwania: </span><meta itemprop=\"timeRequired\" content=\"([0-9]*)")]
+        public string DurationRegex {
+            get {
+                return ((string)(this["DurationRegex"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("<li class=\"(.*?)\">.*\\n\\s+<a href=\"(.*?)\"")]
+        public string DetailLink {
+            get {
+                return ((string)(this["DetailLink"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://www.telemagazyn.pl")]
+        public string BaseUrl {
+            get {
+                return ((string)(this["BaseUrl"]));
             }
         }
     }

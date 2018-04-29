@@ -1,4 +1,5 @@
-﻿using ImportTvGuide.Http_import;
+﻿using DatabaseProject;
+using ImportTvGuide.Http_import;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,8 +13,7 @@ namespace ImportTvGuide
     {
         static void Main(string[] args)
         {
-            AutoMapperInitializer.InitializeMapping();
-           
+            AutoMapperInitializer.InitializeMapping();          
         }
     }
 }

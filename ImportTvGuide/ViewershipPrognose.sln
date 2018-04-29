@@ -4,6 +4,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.27428.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImportTvGuideAndWeather", "ImportTvGuide\ImportTvGuideAndWeather.csproj", "{6822FE3C-3564-4D20-9E02-403961F58A7C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1C8D660F-C9BA-47F5-AD53-DF815B9CEE93} = {1C8D660F-C9BA-47F5-AD53-DF815B9CEE93}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseProject", "ClassLibrary1\DatabaseProject.csproj", "{1C8D660F-C9BA-47F5-AD53-DF815B9CEE93}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +20,10 @@ Global
 		{6822FE3C-3564-4D20-9E02-403961F58A7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6822FE3C-3564-4D20-9E02-403961F58A7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6822FE3C-3564-4D20-9E02-403961F58A7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C8D660F-C9BA-47F5-AD53-DF815B9CEE93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C8D660F-C9BA-47F5-AD53-DF815B9CEE93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C8D660F-C9BA-47F5-AD53-DF815B9CEE93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C8D660F-C9BA-47F5-AD53-DF815B9CEE93}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

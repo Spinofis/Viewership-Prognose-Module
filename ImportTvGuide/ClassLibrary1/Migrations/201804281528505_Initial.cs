@@ -1,4 +1,4 @@
-namespace ImportTvGuide.Migrations
+namespace DatabaseProject.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;

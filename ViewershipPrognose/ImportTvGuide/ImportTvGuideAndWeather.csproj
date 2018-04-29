@@ -69,11 +69,5 @@
   <ItemGroup>
     <Folder Include="Database_functions\" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ClassLibrary1\DatabaseProject.csproj">
-      <Project>{1C8D660F-C9BA-47F5-AD53-DF815B9CEE93}</Project>
-      <Name>DatabaseProject</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

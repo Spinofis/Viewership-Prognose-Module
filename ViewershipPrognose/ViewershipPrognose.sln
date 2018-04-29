@@ -8,7 +8,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImportTvGuideAndWeather", "
 		{1C8D660F-C9BA-47F5-AD53-DF815B9CEE93} = {1C8D660F-C9BA-47F5-AD53-DF815B9CEE93}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseProject", "ClassLibrary1\DatabaseProject.csproj", "{1C8D660F-C9BA-47F5-AD53-DF815B9CEE93}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseProject", "DatabaseProject\DatabaseProject.csproj", "{1C8D660F-C9BA-47F5-AD53-DF815B9CEE93}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

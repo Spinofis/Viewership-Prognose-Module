@@ -10,6 +10,7 @@ namespace DatabaseProject.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
+            ContextKey = "DatabaseProject.DbModel.Model";
         }
 
         protected override void Seed(DatabaseProject.DbModel.Model context)

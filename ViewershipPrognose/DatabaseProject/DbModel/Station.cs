@@ -12,18 +12,19 @@ namespace DatabaseProject.DbModel
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Station()
         {
-            ProgramTV = new HashSet<ProgramTV>();
+            Program_tv = new HashSet<Program_tv>();
         }
 
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int sta_id { get; set; }
 
-        [Required]
+        [StringLength(100)]
         public string sta_name { get; set; }
 
         public DateTime aud_data { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ProgramTV> ProgramTV { get; set; }
+        public virtual ICollection<Program_tv> Program_tv { get; set; }
     }
 }

@@ -54,18 +54,22 @@
   <ItemGroup>
     <Compile Include="AutoMapperInitializer.cs" />
     <Compile Include="DbLogic\DbLogic.cs" />
-    <Compile Include="DbModel\C__MigrationHistory.cs" />
     <Compile Include="DbModel\Model.cs" />
-    <Compile Include="DbModel\ProgramTV.cs" />
+    <Compile Include="DbModel\Program_tv.cs" />
     <Compile Include="DbModel\Program_type.cs" />
     <Compile Include="DbModel\Station.cs" />
+    <Compile Include="DbModel\sysdiagrams.cs" />
     <Compile Include="DbModel\Weather.cs" />
     <Compile Include="DtoModel\ProgramTvDTO.cs" />
     <Compile Include="DtoModel\ProgramTypeDTO.cs" />
     <Compile Include="DtoModel\StationDTO.cs" />
-    <Compile Include="Migrations\201804281528505_Initial.cs" />
-    <Compile Include="Migrations\201804281528505_Initial.Designer.cs">
-      <DependentUpon>201804281528505_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201805271113455_InitialCreate.cs" />
+    <Compile Include="Migrations\201805271113455_InitialCreate.Designer.cs">
+      <DependentUpon>201805271113455_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805271116100_Initial.cs" />
+    <Compile Include="Migrations\201805271116100_Initial.Designer.cs">
+      <DependentUpon>201805271116100_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -75,8 +79,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201804281528505_Initial.resx">
-      <DependentUpon>201804281528505_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201805271113455_InitialCreate.resx">
+      <DependentUpon>201805271113455_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805271116100_Initial.resx">
+      <DependentUpon>201805271116100_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

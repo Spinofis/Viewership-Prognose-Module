@@ -12,11 +12,14 @@ namespace ImportTvGuide.Http_import
 {
     public static class TvGuideParser
     {
-        private static ICollection<ProgramTypeDTO> programTypes;
-        public static void GetProgramTypes()
+        private static ICollection<ProgramTypeDTO> programTypes = new List<ProgramTypeDTO>();
+        public static ICollection<ProgramTvDTO> GetTvGuide()
         {
             DbLogic dbLogic = new DbLogic();
+
             programTypes = dbLogic.GetProgramTypes();
+
+
             ICollection<ProgramTvDTO> programList = new List<ProgramTvDTO>();
 
             for (DateTime currentDate = Settings.Default.StartDate; currentDate <= Settings.Default.EndDate; currentDate.AddDays(1))
@@ -39,7 +42,14 @@ namespace ImportTvGuide.Http_import
                     programType.Name = type.Result("$1");
                     if (!programTypes.Select(x => x.Name).Contains(programType.Name))
                     {
-                        programType = dbLogic.SaveProgramType(programType);
+                        try
+                        {
+                            programType = dbLogic.SaveProgramType(programType);
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.ToString());
+                        }
                         programTypes.Add(programType);
                     }
 
@@ -93,6 +103,7 @@ namespace ImportTvGuide.Http_import
                     programList.Add(programTv);
                 }
             }
+            return programList;
         }
 
 

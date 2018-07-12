@@ -12,7 +12,7 @@ namespace ImportTvGuide {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.6.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.7.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -61,7 +61,7 @@ namespace ImportTvGuide {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("2016-04-16")]
+        [global::System.Configuration.DefaultSettingValueAttribute("2016-04-27")]
         public global::System.DateTime StartDate {
             get {
                 return ((global::System.DateTime)(this["StartDate"]));
@@ -70,7 +70,7 @@ namespace ImportTvGuide {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("2016-04-20")]
+        [global::System.Configuration.DefaultSettingValueAttribute("2016-04-27")]
         public global::System.DateTime EndDate {
             get {
                 return ((global::System.DateTime)(this["EndDate"]));

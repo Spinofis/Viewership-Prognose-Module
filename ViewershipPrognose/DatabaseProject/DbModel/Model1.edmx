@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ViewershipPrognoseModulModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Program_tv">
+          <Key>
+            <PropertyRef Name="pr_id" />
+          </Key>
+          <Property Name="pr_id" Type="int" Nullable="false" />
+          <Property Name="pr_prt_id" Type="int" Nullable="false" />
+          <Property Name="pr_sta_id" Type="int" Nullable="false" />
+          <Property Name="pr_name" Type="varchar" MaxLength="100" />
+          <Property Name="pr_start_date" Type="datetime" />
+          <Property Name="pr_end_date" Type="datetime" />
+          <Property Name="aud_data" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Program_type">
+          <Key>
+            <PropertyRef Name="prt_id" />
+          </Key>
+          <Property Name="prt_id" Type="int" Nullable="false" />
+          <Property Name="prt_name" Type="varchar" MaxLength="100" />
+          <Property Name="aud_data" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Station">
+          <Key>
+            <PropertyRef Name="sta_id" />
+          </Key>
+          <Property Name="sta_id" Type="int" Nullable="false" />
+          <Property Name="sta_name" Type="varchar" MaxLength="100" />
+          <Property Name="aud_data" Type="datetime" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'ViewershipPrognoseModul.dbo.Table_1' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Table_1">
+          <Property Name="dsadsad" Type="int" />
+        </EntityType>-->
+        <EntityType Name="Test">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="25" />
+        </EntityType>
+        <EntityType Name="Weather">
+          <Key>
+            <PropertyRef Name="we_id" />
+          </Key>
+          <Property Name="we_id" Type="int" Nullable="false" />
+          <Property Name="we_temperature" Type="float" />
+          <Property Name="we_wind_speed" Type="float" />
+          <Property Name="we_start_date" Type="datetime" />
+          <Property Name="we_end_date" Type="datetime" />
+          <Property Name="aud_date" Type="datetime" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Program_tv_Program_type">
+          <End Role="Program_type" Type="Self.Program_type" Multiplicity="1" />
+          <End Role="Program_tv" Type="Self.Program_tv" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Program_type">
+              <PropertyRef Name="prt_id" />
+            </Principal>
+            <Dependent Role="Program_tv">
+              <PropertyRef Name="pr_prt_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Program_tv_Station">
+          <End Role="Station" Type="Self.Station" Multiplicity="1" />
+          <End Role="Program_tv" Type="Self.Program_tv" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Station">
+              <PropertyRef Name="sta_id" />
+            </Principal>
+            <Dependent Role="Program_tv">
+              <PropertyRef Name="pr_sta_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ViewershipPrognoseModulModelStoreContainer">
+          <EntitySet Name="Program_tv" EntityType="Self.Program_tv" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Program_type" EntityType="Self.Program_type" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Station" EntityType="Self.Station" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Test" EntityType="Self.Test" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Weather" EntityType="Self.Weather" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Program_tv_Program_type" Association="Self.FK_Program_tv_Program_type">
+            <End Role="Program_type" EntitySet="Program_type" />
+            <End Role="Program_tv" EntitySet="Program_tv" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Program_tv_Station" Association="Self.FK_Program_tv_Station">
+            <End Role="Station" EntitySet="Station" />
+            <End Role="Program_tv" EntitySet="Program_tv" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ViewershipPrognoseModulModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Program_tv">
+          <Key>
+            <PropertyRef Name="pr_id" />
+          </Key>
+          <Property Name="pr_id" Type="Int32" Nullable="false" />
+          <Property Name="pr_prt_id" Type="Int32" Nullable="false" />
+          <Property Name="pr_sta_id" Type="Int32" Nullable="false" />
+          <Property Name="pr_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="pr_start_date" Type="DateTime" Precision="3" />
+          <Property Name="pr_end_date" Type="DateTime" Precision="3" />
+          <Property Name="aud_data" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Program_type" Relationship="Self.FK_Program_tv_Program_type" FromRole="Program_tv" ToRole="Program_type" />
+          <NavigationProperty Name="Station" Relationship="Self.FK_Program_tv_Station" FromRole="Program_tv" ToRole="Station" />
+        </EntityType>
+        <EntityType Name="Program_type">
+          <Key>
+            <PropertyRef Name="prt_id" />
+          </Key>
+          <Property Name="prt_id" Type="Int32" Nullable="false" />
+          <Property Name="prt_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="aud_data" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Program_tv" Relationship="Self.FK_Program_tv_Program_type" FromRole="Program_type" ToRole="Program_tv" />
+        </EntityType>
+        <EntityType Name="Station">
+          <Key>
+            <PropertyRef Name="sta_id" />
+          </Key>
+          <Property Name="sta_id" Type="Int32" Nullable="false" />
+          <Property Name="sta_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="aud_data" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Program_tv" Relationship="Self.FK_Program_tv_Station" FromRole="Station" ToRole="Program_tv" />
+        </EntityType>
+        <EntityType Name="Test">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Weather">
+          <Key>
+            <PropertyRef Name="we_id" />
+          </Key>
+          <Property Name="we_id" Type="Int32" Nullable="false" />
+          <Property Name="we_temperature" Type="Double" />
+          <Property Name="we_wind_speed" Type="Double" />
+          <Property Name="we_start_date" Type="DateTime" Precision="3" />
+          <Property Name="we_end_date" Type="DateTime" Precision="3" />
+          <Property Name="aud_date" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <Association Name="FK_Program_tv_Program_type">
+          <End Role="Program_type" Type="Self.Program_type" Multiplicity="1" />
+          <End Role="Program_tv" Type="Self.Program_tv" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Program_type">
+              <PropertyRef Name="prt_id" />
+            </Principal>
+            <Dependent Role="Program_tv">
+              <PropertyRef Name="pr_prt_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Program_tv_Station">
+          <End Role="Station" Type="Self.Station" Multiplicity="1" />
+          <End Role="Program_tv" Type="Self.Program_tv" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Station">
+              <PropertyRef Name="sta_id" />
+            </Principal>
+            <Dependent Role="Program_tv">
+              <PropertyRef Name="pr_sta_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ViewershipPrognoseModulEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Program_tv" EntityType="Self.Program_tv" />
+          <EntitySet Name="Program_type" EntityType="Self.Program_type" />
+          <EntitySet Name="Station" EntityType="Self.Station" />
+          <EntitySet Name="Test" EntityType="Self.Test" />
+          <EntitySet Name="Weather" EntityType="Self.Weather" />
+          <AssociationSet Name="FK_Program_tv_Program_type" Association="Self.FK_Program_tv_Program_type">
+            <End Role="Program_type" EntitySet="Program_type" />
+            <End Role="Program_tv" EntitySet="Program_tv" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Program_tv_Station" Association="Self.FK_Program_tv_Station">
+            <End Role="Station" EntitySet="Station" />
+            <End Role="Program_tv" EntitySet="Program_tv" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ViewershipPrognoseModulModelStoreContainer" CdmEntityContainer="ViewershipPrognoseModulEntities">
+          <EntitySetMapping Name="Program_tv">
+            <EntityTypeMapping TypeName="ViewershipPrognoseModulModel.Program_tv">
+              <MappingFragment StoreEntitySet="Program_tv">
+                <ScalarProperty Name="pr_id" ColumnName="pr_id" />
+                <ScalarProperty Name="pr_prt_id" ColumnName="pr_prt_id" />
+                <ScalarProperty Name="pr_sta_id" ColumnName="pr_sta_id" />
+                <ScalarProperty Name="pr_name" ColumnName="pr_name" />
+                <ScalarProperty Name="pr_start_date" ColumnName="pr_start_date" />
+                <ScalarProperty Name="pr_end_date" ColumnName="pr_end_date" />
+                <ScalarProperty Name="aud_data" ColumnName="aud_data" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Program_type">
+            <EntityTypeMapping TypeName="ViewershipPrognoseModulModel.Program_type">
+              <MappingFragment StoreEntitySet="Program_type">
+                <ScalarProperty Name="prt_id" ColumnName="prt_id" />
+                <ScalarProperty Name="prt_name" ColumnName="prt_name" />
+                <ScalarProperty Name="aud_data" ColumnName="aud_data" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Station">
+            <EntityTypeMapping TypeName="ViewershipPrognoseModulModel.Station">
+              <MappingFragment StoreEntitySet="Station">
+                <ScalarProperty Name="sta_id" ColumnName="sta_id" />
+                <ScalarProperty Name="sta_name" ColumnName="sta_name" />
+                <ScalarProperty Name="aud_data" ColumnName="aud_data" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Test">
+            <EntityTypeMapping TypeName="ViewershipPrognoseModulModel.Test">
+              <MappingFragment StoreEntitySet="Test">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Weather">
+            <EntityTypeMapping TypeName="ViewershipPrognoseModulModel.Weather">
+              <MappingFragment StoreEntitySet="Weather">
+                <ScalarProperty Name="we_id" ColumnName="we_id" />
+                <ScalarProperty Name="we_temperature" ColumnName="we_temperature" />
+                <ScalarProperty Name="we_wind_speed" ColumnName="we_wind_speed" />
+                <ScalarProperty Name="we_start_date" ColumnName="we_start_date" />
+                <ScalarProperty Name="we_end_date" ColumnName="we_end_date" />
+                <ScalarProperty Name="aud_date" ColumnName="aud_date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

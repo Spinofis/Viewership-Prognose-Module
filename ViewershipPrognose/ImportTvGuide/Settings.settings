@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="TvGuideURL" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">https://www.telemagazyn.pl/tvp_1/?dzien=2018-04-27#program</Value>
+      <Value Profile="(Default)">https://www.telemagazyn.pl/tvp_1/?dzien=2016-04-27#program</Value>
     </Setting>
     <Setting Name="TimeStartRegex" Type="System.String" Scope="Application">
       <Value Profile="(Default)"> &lt;span&gt;.*\n\s+&lt;em&gt;\s+([0-9]{1,2}:[0-9]{1,2})</Value>
@@ -18,7 +18,7 @@
       <Value Profile="(Default)">2016-04-27</Value>
     </Setting>
     <Setting Name="EndDate" Type="System.DateTime" Scope="Application">
-      <Value Profile="(Default)">2016-04-27</Value>
+      <Value Profile="(Default)">2016-04-28</Value>
     </Setting>
     <Setting Name="StationId" Type="System.Int32" Scope="Application">
       <Value Profile="(Default)">1</Value>

@@ -12,16 +12,16 @@ namespace ImportTvGuide.Http_import
     {
         public static string GetHtml(string url)
         {
-            WebRequest webRequest = WebRequest.Create(url);
-            WebResponse webResponse = webRequest.GetResponse();
-            Stream contentStream = webResponse.GetResponseStream();
-            string html = String.Empty;
-            using (var streamReader = new StreamReader(contentStream))
-            {
-                html = streamReader.ReadToEnd();
-            }
+                WebRequest webRequest = WebRequest.Create(url);
+                WebResponse webResponse = webRequest.GetResponse();
+                Stream contentStream = webResponse.GetResponseStream();
+                string html = String.Empty;
+                using (var streamReader = new StreamReader(contentStream))
+                {
+                    html = streamReader.ReadToEnd();
+                }
 
-            return html;
+                return html;
         }
     }
 }

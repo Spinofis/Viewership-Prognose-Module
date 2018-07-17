@@ -25,7 +25,7 @@ namespace ImportTvGuide {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://www.telemagazyn.pl/tvp_1/?dzien=2018-04-27#program")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://www.telemagazyn.pl/tvp_1/?dzien=2016-04-27#program")]
         public string TvGuideURL {
             get {
                 return ((string)(this["TvGuideURL"]));
@@ -70,7 +70,7 @@ namespace ImportTvGuide {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("2016-04-27")]
+        [global::System.Configuration.DefaultSettingValueAttribute("2016-04-28")]
         public global::System.DateTime EndDate {
             get {
                 return ((global::System.DateTime)(this["EndDate"]));

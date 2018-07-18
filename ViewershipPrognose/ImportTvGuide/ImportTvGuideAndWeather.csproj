@@ -55,6 +55,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Http_import\HtmlImporter.cs" />
+    <Compile Include="Http_import\ProgramTvHelper.cs" />
+    <Compile Include="Http_import\TvGuideImporter.cs" />
     <Compile Include="Http_import\TvGuideParser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

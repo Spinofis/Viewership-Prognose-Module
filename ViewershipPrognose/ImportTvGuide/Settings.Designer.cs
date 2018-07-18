@@ -79,15 +79,6 @@ namespace ImportTvGuide {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public int StationId {
-            get {
-                return ((int)(this["StationId"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute(" <span>Czas trwania: </span><meta itemprop=\"timeRequired\" content=\"([0-9]*)")]
         public string DurationRegex {
             get {

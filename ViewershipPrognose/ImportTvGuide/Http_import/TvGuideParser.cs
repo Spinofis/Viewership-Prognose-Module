@@ -61,12 +61,12 @@ namespace ImportTvGuide.Http_import
                 //detail link
                 detailLink = matchDetailsLinks[i].Result("$2");
                 detailURL = string.Concat(Settings.Default.BaseUrl, detailLink);
-                FillProgramWithDataFromDetailLink(detailURL, programTv);
+                FillProgramWithDataFromDetailLink(detailURL, programTv, isNextDay);
             }
             return programList;
         }
 
-        private void FillProgramWithDataFromDetailLink(string Url, ProgramTvDTO programTv)
+        private void FillProgramWithDataFromDetailLink(string Url, ProgramTvDTO programTv, bool isNextDay)
         {
             string detailHtml = HtmlImporter.GetHtml(Url);
             Regex regexNames = new Regex(Settings.Default.NameRegex);
@@ -76,113 +76,10 @@ namespace ImportTvGuide.Http_import
             Regex regexDuration = new Regex(Settings.Default.DurationRegex);
             MatchCollection matchesDuration = regexDuration.Matches(detailHtml);
             programTv.Name = matchNames[0].Result("$1");
-            //programTv.Type = new ProgramTypeDTO() { Name = matchTypes[0].Result("$1") };
-            // programTv.EndDate = programTv.StartDate.AddMinutes();
+            if (matchTypes.Count > 0)
+                programTv.Type = new ProgramTypeDTO() { Name = matchTypes[0].Result("$1") };
+            else
+                programTv.Type = new ProgramTypeDTO() { Name = "Brak" };
         }
-
-
-        public ProgramTypeDTO GetProgramType(string programUrl)
-        {
-
-            return null;
-        }
-
-        public ProgramTvDTO GetProgramDetail(string programUrl)
-        {
-            return null;
-        }
-
-        //public ICollection<ProgramTvDTO> GetTvGuide()
-        //{
-        //    DbLogic dbLogic = new DbLogic();
-
-        //    ICollection<ProgramTypeDTO> programTypes = dbLogic.GetProgramTypes();
-
-
-        //    ICollection<ProgramTvDTO> programList = new List<ProgramTvDTO>();
-
-        //    for (DateTime currentDate = Settings.Default.StartDate; currentDate <= Settings.Default.EndDate; currentDate = currentDate.AddDays(1))
-        //    {
-        //        string currentDateString;
-        //        string nextDateString;
-        //        string guideUrl = Settings.Default.TvGuideURL;
-        //        string html = HtmlImporter.GetHtml(guideUrl);
-        //        string htmlNextDay;
-        //        Regex regex = new Regex(Settings.Default.DetailLink);
-        //        MatchCollection detailLinks = regex.Matches(html);
-        //        regex = new Regex(Settings.Default.TimeStartRegex);
-        //        MatchCollection timesStart = regex.Matches(html);
-        //        for (int i = 1; i < detailLinks.Count; i++)
-        //        {
-        //            string htmlDetail = HtmlImporter.GetHtml(Settings.Default.BaseUrl + detailLinks[i].Result("$2"));
-        //            regex = new Regex(Settings.Default.TypeRegex);
-        //            ProgramTypeDTO programType = new ProgramTypeDTO();
-        //            Match type = regex.Match(htmlDetail);
-        //            programType.Name = type.Result("$1");
-        //            if (!programTypes.Select(x => x.Name).Contains(programType.Name))
-        //            {
-        //                try
-        //                {
-        //                    programType = dbLogic.SaveProgramType(programType);
-        //                }
-        //                catch (Exception ex)
-        //                {
-        //                    Console.WriteLine(ex.ToString());
-        //                }
-        //                programTypes.Add(programType);
-        //            }
-
-        //            ProgramTvDTO programTv = new ProgramTvDTO();
-        //            programTv.Station = new StationDTO() { Id = Settings.Default.StationId };
-        //            programTv.Type = programType;
-        //            string startTimeString = timesStart[i].Result("$1");
-        //            TimeSpan startProgramTimeSpan = TimeSpan.Parse(startTimeString);
-        //            TimeSpan endProgramTimeSpan;
-        //            if (i + 1 < detailLinks.Count)
-        //                endProgramTimeSpan = TimeSpan.Parse(timesStart[i + 1].Result("$1"));
-        //            else
-        //            {
-        //                currentDateString = currentDate.Date.ToString("yyyy-MM-dd");
-        //                nextDateString = currentDate.AddDays(1).Date.ToString("yyyy-MM-dd");
-        //                guideUrl = guideUrl.Replace(currentDateString, nextDateString);
-        //                htmlNextDay = HtmlImporter.GetHtml(guideUrl);
-        //                regex = new Regex(Settings.Default.TimeStartRegex);
-        //                endProgramTimeSpan = TimeSpan.Parse(regex.Matches(htmlNextDay)[1].Result("$1"));
-        //            }
-        //            DateTime startProgramDate, endProgramDate, startAdvertDate, endAdvertDate;
-
-        //            if (Math.Abs(new TimeSpan(23, 59, 59).Subtract(startProgramTimeSpan).Hours) > 12)
-        //                startProgramDate = currentDate.AddDays(1).Add(startProgramTimeSpan);
-        //            else
-        //                startProgramDate = currentDate.Add(startProgramTimeSpan);
-
-        //            regex = new Regex(Settings.Default.DurationRegex);
-        //            int duration = Int32.Parse(regex.Match(htmlDetail).Result("$1"));
-
-        //            if (Math.Abs(new TimeSpan(23, 59, 59).Subtract(endProgramTimeSpan).Hours) > 12)
-        //                endProgramDate = currentDate.AddDays(1).Add(endProgramTimeSpan);
-        //            else
-        //                endProgramDate = currentDate.Add(endProgramTimeSpan);
-
-        //            if (duration > 0)
-        //            {
-        //                endAdvertDate = endProgramDate;
-        //                endProgramDate.Date.Add(startProgramTimeSpan).AddMinutes(duration);
-        //                startAdvertDate = startProgramDate.AddMinutes(duration);
-        //                ProgramTvDTO advert = new ProgramTvDTO();
-        //                advert.StartDate = startAdvertDate;
-        //                advert.EndDate = endAdvertDate;
-        //                advert.Type = programTypes.Where(x => x.Id == 1).First();
-        //                advert.Station = new StationDTO() { Id = Settings.Default.StationId };
-        //                programList.Add(advert);
-        //            }
-
-        //            programTv.StartDate = startProgramDate;
-        //            programTv.EndDate = endProgramDate;
-        //            programList.Add(programTv);
-        //        }
-        //    }
-        //    return programList;
-        //}
     }
 }

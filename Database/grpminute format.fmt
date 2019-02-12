@@ -1,0 +1,8 @@
+9.0
+6
+1       SQLCHAR             0       100      ","      1     AUDI_Start_Date          SQL_Latin1_General_Cp437_BIN 
+2       SQLCHAR             0       100      ","      2     SECO_Minute              SQL_Latin1_General_Cp437_BIN 
+3       SQLCHAR             0       100      ","      3     CHAN_ID                  SQL_Latin1_General_Cp437_BIN 
+4       SQLCHAR             0       100      ","      4     TAGR_ID                  SQL_Latin1_General_Cp437_BIN 
+5       SQLCHAR             0       100      ","      5     AUDI_GRP_Actual          SQL_Latin1_General_Cp437_BIN 
+6       SQLCHAR             0       100      "\n"   6     AUFO_GRP_Forecast        SQL_Latin1_General_Cp437_BIN 

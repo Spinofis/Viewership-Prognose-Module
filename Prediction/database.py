@@ -11,7 +11,7 @@ class Database:
                               'Trusted_Connection=yes;')
 
     def get_data_from_db(self):
-        sql = "SELECT * FROM [dbo].f_data_to_learn_get (N'1') order by date_time"
+        sql = "SELECT * FROM [dbo].f_data_to_learn_get (N'1,3,4,5,6,7') order by date_time"
         df = pd.read_sql(sql, self.__get_database_connection())
         df.drop(['date_time'], axis=1, inplace=True, errors='ignore')
         return df

@@ -18,7 +18,7 @@ class Model:
 
     def build_model(self, train, n_input):
         train_x, train_y = self.__dc.to_supervised(train, n_input)
-        verbose, epochs, batch_size = 0, 100, 16
+        verbose, epochs, batch_size = 0, 50, 16
         n_timesteps, n_features, n_outputs = train_x.shape[1], train_x.shape[2], train_y.shape[1]
         model = Sequential()
         model.add(Conv1D(filters=32, kernel_size=3, activation='relu',
@@ -68,8 +68,8 @@ class Model:
             history.append(test[i, :])
         predictions = np.array(predictions)
         score, scores = self.evaluate_forecasts(test[:, :, 0], predictions)
-        return score, scores
+        return score, scores, predictions
 
     def summarize_scores(self, name, score, scores):
-        s_scores = ', '.join(['%.1f' % s for s in scores])
-        print('%s: [%.3f] %s' % (name, score, s_scores))
+        s_scores = ', '.join(['%.5f' % s for s in scores])
+        print('%s: [%.5f] %s' % (name, score, s_scores))

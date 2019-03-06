@@ -8,7 +8,7 @@ class DataConverter:
         total_days = total_data/24
         end_train = (int)(round(total_days*0.7, 0)*24)
         start_test = (int)(end_train-total_data)
-        train, test = data[1:end_train+1, :], data[start_test:]
+        train, test = data[0:end_train, :], data[start_test:]
         train = np.array(np.split(train, len(train)/24))
         test = np.array(np.split(test, len(test)/24))
         return train, test
@@ -34,7 +34,7 @@ class DataConverter:
             if out_end < len(data):
                 X.append(data[in_start:in_end, :])
                 y.append(data[in_end:out_end, 0])
-        in_start += 1
+            in_start += 1
         return np.array(X), np.array(y)
 
     # def dataframe_to_hastack(self, df):

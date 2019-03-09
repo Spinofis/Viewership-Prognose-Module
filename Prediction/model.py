@@ -18,21 +18,22 @@ class Model:
 
     def build_model(self, train, n_input):
         train_x, train_y = self.__dc.to_supervised(train, n_input)
-        verbose, epochs, batch_size = 0, 50, 16
+        verbose, epochs = 2, 30
         n_timesteps, n_features, n_outputs = train_x.shape[1], train_x.shape[2], train_y.shape[1]
         model = Sequential()
-        model.add(Conv1D(filters=32, kernel_size=3, activation='relu',
+        model.add(Conv1D(filters=200, kernel_size=2, activation='relu',
                          input_shape=(n_timesteps, n_features)))
-        model.add(Conv1D(filters=32, kernel_size=3, activation='relu'))
+        model.add(Conv1D(filters=200, kernel_size=2, activation='relu'))
         model.add(MaxPooling1D(pool_size=2))
-        model.add(Conv1D(filters=16, kernel_size=3, activation='relu'))
+        model.add(Conv1D(filters=200, kernel_size=2, activation='relu'))
+        model.add(MaxPooling1D(pool_size=2))
+        model.add(Conv1D(filters=300, kernel_size=2, activation='relu'))
         model.add(MaxPooling1D(pool_size=2))
         model.add(Flatten())
         model.add(Dense(100, activation='relu'))
         model.add(Dense(n_outputs))
         model.compile(loss='mse', optimizer='adam')
-        model.fit(train_x, train_y, epochs=epochs,
-                  batch_size=batch_size, verbose=verbose)
+        model.fit(train_x, train_y, epochs=epochs, verbose=verbose)
         return model
 
     def forecast(self, model, history, n_input):
@@ -73,3 +74,4 @@ class Model:
     def summarize_scores(self, name, score, scores):
         s_scores = ', '.join(['%.5f' % s for s in scores])
         print('%s: [%.5f] %s' % (name, score, s_scores))
+

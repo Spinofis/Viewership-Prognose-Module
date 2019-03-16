@@ -6,16 +6,21 @@ class DataConverter:
     train = None
     test = None
 
-    def split_dataset(self, data):
-        total_data = len(data)
-        total_days = total_data/24
-        end_train = (int)(round(total_days*0.7, 0)*24)
-        start_test = (int)(end_train-total_data)
+    def split_dataset(self, data, group_size=1):
+        data_count = len(data)
+        group_count=None
+        if(group_size > 0):
+            group_count = data_count/group_size
+            end_train = (int)(round(group_count*0.7, 0)*group_size)
+        else:
+            end_train = (int)(round(data_count*0.7, 0))        
+        start_test = (int)(end_train-data_count)
         train, test = data[0:end_train, :], data[start_test:]
         self.train = train
         self.test = test
-        train = np.array(np.split(train, len(train)/24))
-        test = np.array(np.split(test, len(test)/24))
+        if(group_size>0):
+            train = np.array(np.split(train, len(train)/group_size))
+            test = np.array(np.split(test, len(test)/group_size))
         return train, test
 
     def split_sequences(self, sequences, n_steps):

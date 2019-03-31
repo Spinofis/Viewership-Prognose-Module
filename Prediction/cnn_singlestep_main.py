@@ -21,4 +21,4 @@ for i in range(len(channels_array)):
     score, predictions = model.evaluate_model(
         train, test, n_input, y_index)
     db.save_result(int(Method_type.Cnn_multivariate_singlestep),
-                   int(Granulation.hour), id_chan, score)
+                   int(Granulation.minute), id_chan, score)

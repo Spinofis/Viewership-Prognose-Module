@@ -10,14 +10,16 @@ class Database:
                               'Database=ViewershipForecastDB;'
                               'Trusted_Connection=yes;')
 
-    def get_grp_aggregated_hourly(self):
-        sql = "SELECT * FROM [dbo].f_data_to_learn_hours_get (N'1,2,3,4,5,6') order by date_time"
+    def get_grp_aggregated_hourly(self, months_number_string):
+        sql = "SELECT * FROM [dbo].f_data_to_learn_hours_get (N'" + \
+            months_number_string+"') order by date_time"
         df = pd.read_sql(sql, self.__get_database_connection())
         df.drop(['date_time'], axis=1, inplace=True, errors='ignore')
         return df
 
-    def get_grp_none_aggregated(self):
-        sql = "SELECT * FROM [dbo].f_data_to_learn_minute_get (N'1,2,3,4,5,6') order by date_time"
+    def get_grp_none_aggregated(self, months_number_string):
+        sql = "SELECT * FROM [dbo].f_data_to_learn_minute_get (N'" + \
+            months_number_string+"') order by date_time"
         df = pd.read_sql(sql, self.__get_database_connection())
         df.drop(['date_time'], axis=1, inplace=True, errors='ignore')
         return df
@@ -28,13 +30,32 @@ class Database:
         sql = sql.replace("@id_granulation", str(id_granulation))
         sql = sql.replace("@id_chan", str(id_chan))
         sql = sql.replace("@rmse", str(rmse))
+        self.__execute_insert(sql)
+
+    def save_sarima_result(self, config):
+        sql = (
+            'insert into result.Sarima_config(id_granulation,rmse,p_trend,d_trend,q_trend,trend,P_season,D_season,Q_season,season) '
+            'values(@id_granulation,@rmse,@p_trend,@d_trend,@q_trend,@trend,@P_season,@D_season,@Q_season,@season)').format()
+        sql = sql.replace("@id_granulation", str(config.id_granulation))
+        sql = sql.replace("@rmse", str(config.rmse))
+        sql = sql.replace("@p_trend", str(config.p))
+        sql = sql.replace("@d_trend", str(config.d))
+        sql = sql.replace("@q_trend", str(config.q))
+        sql = sql.replace("@trend", """'"""+str(config.trend)+"""'""")
+        sql = sql.replace("@P_season", str(config.P))
+        sql = sql.replace("@D_season", str(config.D))
+        sql = sql.replace("@Q_season", str(config.Q))
+        sql = sql.replace("@season", str(config.season))
+        self.__execute_insert(sql)
+
+    def get_channel(self):
+        sql = "exec p_channel_get"
+        db = self.__get_database_connection()
+        df = pd.read_sql(sql, db)
+        return df
+
+    def __execute_insert(self, sql):
         db = self.__get_database_connection()
         cursor = db.cursor()
         cursor.execute(sql)
         db.commit()
-
-    def get_channel(self):
-        sql="exec p_channel_get"
-        db=self.__get_database_connection()
-        df=pd.read_sql(sql,db)
-        return df

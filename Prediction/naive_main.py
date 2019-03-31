@@ -6,12 +6,19 @@ import numpy as np
 
 db=Database()
 model=Model()
-df=db.get_grp_aggregated_hourly()
+df=db.get_grp_none_aggregated()
 channels = db.get_channel()
 channels_array = np.array(channels["id_chan"])
-step_back=24
+
+shift_back=1440
 for i in range(len(channels_array)):
     id_chan=channels_array[i]
     name_chan=str(id_chan)
-    rmse=model.evaluate_model(np.array(df[name_chan]),step_back)
-    db.save_result(int(Method_type.Naive_avg_yesterday),int(Granulation.hour),id_chan,rmse)
+    rmse=model.evaluate_model_a_was_week_ago(np.array(df[name_chan]),shift_back)
+    db.save_result(int(Method_type.Naive_as_was_week_ago),int(Granulation.minute),id_chan,rmse)
+
+for i in range(len(channels_array)):
+    id_chan=channels_array[i]
+    name_chan=str(id_chan)
+    rmse=model.evaluate_model_avg_weekdays_ago(np.array(df[name_chan]),shift_back)
+    db.save_result(int(Method_type.Naive_avg_weekdays_ago),int(Granulation.minute),id_chan,rmse)

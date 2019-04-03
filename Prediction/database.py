@@ -24,6 +24,13 @@ class Database:
         df.drop(['date_time'], axis=1, inplace=True, errors='ignore')
         return df
 
+    def get_data_to_learn(self, start, length):
+        sql = "select * from f_data_to_learn_minute_get(" + \
+            str(start)+","+str(start+length)+")"
+        df = pd.read_sql(sql, self.__get_database_connection())
+        # df.drop(['date_time'], axis=1, inplace=True, errors='ignore')
+        return df
+
     def save_result(self, id_method_type, id_granulation, id_chan, rmse):
         sql = "insert into result.Result(id_method_type,id_granulation,id_chan,rmse) values(@id_type,@id_granulation,@id_chan,@rmse)"
         sql = sql.replace("@id_type", str(id_method_type))

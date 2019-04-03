@@ -32,14 +32,16 @@ class GridSearch:
                                         configurations.append(cfg)
         return configurations
 
-    def grid_search(self, data, cfg, parallel=True, n_jobs=cpu_count()):
+    def grid_search(self, data, cfg_list, parallel=True):
         scores = None
         if parallel:
-            executor = Parallel(n_jobs=n_jobs, backend='multiprocessing')
-            tasks = delayed(self.__model.score_model)(data, cfg)
+            executor = Parallel(n_jobs=cpu_count(), backend='multiprocessing')
+            tasks = (delayed(self.__model.score_model)(data, cfg)
+                     for cfg in cfg_list)
             scores = executor(tasks)
         else:
-            scores = self.__model.score_model(data, cfg)
-            scores = [r for r in scores if r[1] != None]
-            scores.sort(key=lambda tup: tup[1])
+            scores = [self.__model.score_model(
+                data, cfg) for cfg in cfg_list]
+        scores = [r for r in scores if r[1] != None]
+        scores.sort(key=lambda tup: tup[1])
         return scores

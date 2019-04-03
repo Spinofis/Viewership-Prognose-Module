@@ -11,6 +11,7 @@ from sklearn.metrics import mean_squared_error
 class GridSearchModel:
 
     __dc = None
+    number_config = 0
 
     def __init__(self, dc):
         self.__dc = dc
@@ -38,8 +39,11 @@ class GridSearchModel:
         return error
 
     def score_model(self, data, cfg, debug=False):
+        print
         result = None
         key = str(cfg)
+        self.number_config += 1
+        print("Config number "+str(self.number_config)+" is being tested")
         if debug:
             result = self.walk_forward_validation(data, cfg)
         else:

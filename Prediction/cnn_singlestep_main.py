@@ -10,7 +10,7 @@ from enums.method_type import Method_type
 db=Database()
 dc=DataConverter()
 model=Model(dc)
-df=db.get_grp_aggregated_hourly()
+df=db.get_grp_aggregated_hourly('1,2,3,4,5,6,7')
 train,test=dc.split_dataset(df.values)
 n_input=168
 channels = db.get_channel()

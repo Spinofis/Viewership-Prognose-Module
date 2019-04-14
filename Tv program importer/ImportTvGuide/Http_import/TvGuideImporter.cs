@@ -1,4 +1,5 @@
-﻿using DatabaseProject.DtoModel;
+﻿using DatabaseProject.DbLogic;
+using DatabaseProject.DtoModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,14 +10,17 @@ namespace ImportTvGuide.Http_import
 {
     public class TvGuideImporter
     {
-        public List<ProgramTvDTO> programs = new List<ProgramTvDTO>();
-        public List<ProgramTypeDTO> programTypes = new List<ProgramTypeDTO>();
+        public List<ProgramTvDto> programs = new List<ProgramTvDto>();
+        public List<ProgramTypeDto> programTypes = new List<ProgramTypeDto>();
 
         public void RunImport()
         {
             programs = new TvGuideParser().GetTvProgramList();
             ProgramTvHelper.SetEndDateToAllProgram(programs);
             programTypes = ProgramTvHelper.GetTypesFromPrograms(programs);
+            DbLogic db = new DbLogic();
+            db.SaveProgramTypes(programTypes);
+            db.SavePrograms(programs);
         }
     }
 }

@@ -7,11 +7,10 @@ using System.Threading.Tasks;
 
 namespace DatabaseProject.DtoModel
 {
-    public class ProgramTypeDTO
+    public class ProgramTypeDto
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-
+        public int id { get; set; }
+        public string name { get; set; }
     }
 }
 

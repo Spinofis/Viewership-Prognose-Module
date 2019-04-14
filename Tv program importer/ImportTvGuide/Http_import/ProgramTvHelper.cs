@@ -9,20 +9,26 @@ namespace ImportTvGuide.Http_import
 {
     public static class ProgramTvHelper
     {
-        public static void SetEndDateToAllProgram(List<ProgramTvDTO> programs)
+        public static void SetEndDateToAllProgram(List<ProgramTvDto> programs)
         {
             for (int i = 0; i < programs.Count - 1; i++)
             {
-                programs[i].EndDate = programs[i + 1].StartDate;
+                programs[i].end_date = programs[i + 1].start_date;
             }
             if (programs.Count > 0)
-                programs[programs.Count - 1].EndDate = new DateTime(2100, 01, 01);
+                programs[programs.Count - 1].end_date = new DateTime(2100, 01, 01);
         }
 
-        public static List<ProgramTypeDTO> GetTypesFromPrograms(List<ProgramTvDTO> programs)
+        public static List<ProgramTypeDto> GetTypesFromPrograms(List<ProgramTvDto> programs)
         {
-            var obj = programs.Select(x => x.Type).GroupBy(x => x.Name);
-            return obj.Select(x => x.FirstOrDefault()).ToList();
+            List<ProgramTypeDto> programTypes = new List<ProgramTypeDto>();
+            List<string> programTypesNames = programs
+                .GroupBy(x => x.type_name)
+                .Select(x => x.FirstOrDefault()?.type_name)
+                .ToList();
+            programTypesNames
+                .ForEach(x => programTypes.Add(new ProgramTypeDto() { name = x }));
+            return programTypes;
         }
     }
 }

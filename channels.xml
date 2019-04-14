@@ -1,0 +1,1385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+   <row>
+      <Name>Comedy Central Family</Name>
+      <Short.name>CC Family</Short.name>
+      <Previous.name>Comedy Central Family [VH1 Polska]</Previous.name>
+   </row>
+   <row>
+      <Name>Extreme Sports Channel</Name>
+      <Short.name>ExtremeSpo</Short.name>
+      <Previous.name>Extreme Sports</Previous.name>
+   </row>
+   <row>
+      <Name>ale kino+</Name>
+      <Short.name>ale kino+</Short.name>
+      <Previous.name>Ale Kino+ [Ale Kino]</Previous.name>
+   </row>
+   <row>
+      <Name>AXN</Name>
+      <Short.name>AXN</Short.name>
+      <Previous.name>AXN</Previous.name>
+   </row>
+   <row>
+      <Name>Canal+</Name>
+      <Name>Canal+</Name>
+      <Name>Canal+</Name>
+      <Short.name>Canal+</Short.name>
+      <Previous.name>Canal+</Previous.name>
+   </row>
+   <row>
+      <Name>Canal+ Sport</Name>
+      <Short.name>Canal+ Sport</Short.name>
+      <Previous.name>Canal+ Sport [Canal+ Niebieski]</Previous.name>
+   </row>
+   <row>
+      <Name>Travel Channel</Name>
+      <Short.name>Travel Channel</Short.name>
+      <Previous.name>Travel Channel</Previous.name>
+   </row>
+   <row>
+      <Name>CBS Reality</Name>
+      <Short.name>Reality</Short.name>
+      <Previous.name>CBS Reality [Zone Reality]</Previous.name>
+   </row>
+   <row>
+      <Name>CBS Action</Name>
+      <Short.name>Action</Short.name>
+      <Previous.name>CBS Action [Zone Romantica]</Previous.name>
+   </row>
+   <row>
+      <Name>4fun.tv</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>4fun.tv</Previous.name>
+   </row>
+   <row>
+      <Name>Puls</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>TV PULS [PULS]</Previous.name>
+   </row>
+   <row>
+      <Name>Tele5</Name>
+      <Short.name>Tele5</Short.name>
+      <Previous.name>Tele5</Previous.name>
+   </row>
+   <row>
+      <Name>Love</Name>
+      <Short.name>Love</Short.name>
+      <Previous.name>LOVE [Wedding TV]</Previous.name>
+   </row>
+   <row>
+      <Name>MiniMini+</Name>
+      <Short.name>MiniMini+</Short.name>
+      <Previous.name>MiniMini+ [MiniMini]</Previous.name>
+   </row>
+   <row>
+      <Name>Comedy Central</Name>
+      <Short.name>Comedy Central</Short.name>
+      <Previous.name>Comedy Central</Previous.name>
+   </row>
+   <row>
+      <Name>13th Street</Name>
+      <Short.name>13th Street</Short.name>
+      <Previous.name>13 Ulica [13th Street Universal]</Previous.name>
+   </row>
+   <row>
+      <Name>Disney XD</Name>
+      <Short.name>Disney XD</Short.name>
+      <Previous.name>Disney XD</Previous.name>
+   </row>
+   <row>
+      <Name>Jetix Play</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>Jetix Play</Previous.name>
+   </row>
+   <row>
+      <Name>Kino Polska</Name>
+      <Short.name>Kino Polska</Short.name>
+      <Previous.name>Kino Polska</Previous.name>
+   </row>
+   <row>
+      <Name>kuchnia+</Name>
+      <Short.name>kuchnia+</Short.name>
+      <Previous.name>kuchnia+ [kuchnia.tv]</Previous.name>
+   </row>
+   <row>
+      <Name>HYPER+</Name>
+      <Short.name>HYPER+</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>MTV</Name>
+      <Short.name>MTV</Short.name>
+      <Previous.name>MTV Polska</Previous.name>
+   </row>
+   <row>
+      <Name>National Geographic</Name>
+      <Short.name>National Geo</Short.name>
+      <Previous.name>National Geographic</Previous.name>
+   </row>
+   <row>
+      <Name>PLANETE+</Name>
+      <Short.name>PLANETE+</Short.name>
+      <Previous.name>Planete+ [Planete]</Previous.name>
+   </row>
+   <row>
+      <Name>VIVA</Name>
+      <Short.name>VIVA</Short.name>
+      <Previous.name>VIVA Polska</Previous.name>
+   </row>
+   <row>
+      <Name>teleTOON+</Name>
+      <Short.name>Teletoon+</Short.name>
+      <Previous.name>teleTOON+ [ZigZap/Hyper]</Previous.name>
+   </row>
+   <row>
+      <Name>CBS Drama</Name>
+      <Short.name>Drama</Short.name>
+      <Previous.name>CBS Drama [Club TV]</Previous.name>
+   </row>
+   <row>
+      <Name>CBS Europa</Name>
+      <Short.name>Europa</Short.name>
+      <Previous.name>CBS Europa [Zone Europa]</Previous.name>
+   </row>
+   <row>
+      <Name>Internet</Name>
+      <Short.name>Internet</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>FOX Life</Name>
+      <Short.name>FOX Life</Short.name>
+      <Previous.name>FOXLife</Previous.name>
+   </row>
+   <row>
+      <Name>BBC Entertainment</Name>
+      <Short.name>BBC Ent</Short.name>
+      <Previous.name>BBC Entertainment</Previous.name>
+   </row>
+   <row>
+      <Name>BBC Knowledge</Name>
+      <Short.name>BBC Knowledge</Short.name>
+      <Previous.name>BBC Knowledge</Previous.name>
+   </row>
+   <row>
+      <Name>BBC Lifestyle</Name>
+      <Short.name>BBC Lifestyle</Short.name>
+      <Previous.name>BBC Lifestyle</Previous.name>
+   </row>
+   <row>
+      <Name>Movies 24</Name>
+      <Short.name>Movies 24</Short.name>
+      <Previous.name>Movies 24</Previous.name>
+   </row>
+   <row>
+      <Name>Superstacja</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>Superstacja</Previous.name>
+   </row>
+   <row>
+      <Name>Universal Channel</Name>
+      <Short.name>Universal Chan</Short.name>
+      <Previous.name>Universal Channel</Previous.name>
+   </row>
+   <row>
+      <Name>Nat Geo Wild</Name>
+      <Short.name>Nat Geo Wild</Short.name>
+      <Previous.name>Nat Geo Wild</Previous.name>
+   </row>
+   <row>
+      <Name>E! Entertainment</Name>
+      <Short.name>Entertainment</Short.name>
+      <Previous.name>E!Entertainment [E!]</Previous.name>
+   </row>
+   <row>
+      <Name>Nick</Name>
+      <Short.name>Nick</Short.name>
+      <Previous.name>Nickelodeon</Previous.name>
+   </row>
+   <row>
+      <Name>DOMO+</Name>
+      <Short.name>DOMO+</Short.name>
+      <Previous.name>Domo+ [Domo]</Previous.name>
+   </row>
+   <row>
+      <Name>TVS</Name>
+      <Short.name>TVS</Short.name>
+      <Previous.name>TVS</Previous.name>
+   </row>
+   <row>
+      <Name>AXN Black</Name>
+      <Short.name>AXN Sci-Fi</Short.name>
+      <Previous.name>AXN Black [AXN Sci-Fi]</Previous.name>
+   </row>
+   <row>
+      <Name>FilmBox</Name>
+      <Short.name>FilmBox</Short.name>
+      <Previous.name>FilmBox</Previous.name>
+   </row>
+   <row>
+      <Name>AXN White</Name>
+      <Short.name>AXN Crime</Short.name>
+      <Previous.name>AXN White [AXN Crime]</Previous.name>
+   </row>
+   <row>
+      <Name>Canal+ Gol</Name>
+      <Short.name>Canal+ Gol</Short.name>
+      <Previous.name>Canal+ Family 2 [Canal+ Gol]</Previous.name>
+   </row>
+   <row>
+      <Name>TCM</Name>
+      <Short.name>TCM</Short.name>
+      <Previous.name>TCM</Previous.name>
+   </row>
+   <row>
+      <Name>ESKA TV</Name>
+      <Short.name>ESKA TV</Short.name>
+      <Previous.name>Eska TV</Previous.name>
+   </row>
+   <row>
+      <Name>Polsat JimJam</Name>
+      <Short.name>Polsat JJ</Short.name>
+      <Previous.name>Polsat JimJam [JimJam]</Previous.name>
+   </row>
+   <row>
+      <Name>Rebel</Name>
+      <Short.name>Rebel</Short.name>
+      <Previous.name>Rebel.tv</Previous.name>
+   </row>
+   <row>
+      <Name>BBC CBeebies</Name>
+      <Short.name>BBC CBeebies</Short.name>
+      <Previous.name>BBC CBeebies</Previous.name>
+   </row>
+   <row>
+      <Name>Orange sport</Name>
+      <Short.name>Orange sport</Short.name>
+      <Previous.name>Orange Sport [Orange Sport Info]</Previous.name>
+   </row>
+   <row>
+      <Name>Sportklub</Name>
+      <Short.name>Sportklub</Short.name>
+      <Previous.name>Sportklub</Previous.name>
+   </row>
+   <row>
+      <Name>Disney Channel</Name>
+      <Short.name>Disney Chan</Short.name>
+      <Previous.name>Disney Channel</Previous.name>
+   </row>
+   <row>
+      <Name>HISTORY</Name>
+      <Short.name>History</Short.name>
+      <Previous.name>HISTORY</Previous.name>
+   </row>
+   <row>
+      <Name>Fox</Name>
+      <Short.name>Fox</Short.name>
+      <Previous.name>FOX</Previous.name>
+   </row>
+   <row>
+      <Name>Czworka</Name>
+      <Short.name>Czworka</Short.name>
+      <Previous.name>Czworka Polskie Radio</Previous.name>
+   </row>
+   <row>
+      <Name>atmedia</Name>
+      <Short.name>atmedia</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>iTV</Name>
+      <Short.name>iTV</Short.name>
+      <Previous.name>ITV</Previous.name>
+   </row>
+   <row>
+      <Name>Blink!</Name>
+      <Short.name>Blink!</Short.name>
+      <Previous.name>Viacom Blink</Previous.name>
+   </row>
+   <row>
+      <Name>Disney Junior</Name>
+      <Short.name>Disney Junior</Short.name>
+      <Previous.name>Disney Junior [Playhouse Disney]</Previous.name>
+   </row>
+   <row>
+      <Name>PoloTV</Name>
+      <Short.name>PoloTV</Short.name>
+      <Previous.name>Polo TV</Previous.name>
+   </row>
+   <row>
+      <Name>Rodin TV</Name>
+      <Short.name>Rodin TV</Short.name>
+      <Previous.name>Rodin TV</Previous.name>
+   </row>
+   <row>
+      <Name>SciFi Universal</Name>
+      <Short.name>SciFi Universal</Short.name>
+      <Previous.name>Scifi Universal</Previous.name>
+   </row>
+   <row>
+      <Name>VH1</Name>
+      <Short.name>VH1</Short.name>
+      <Previous.name>VH 1 [VH1 Europe]</Previous.name>
+   </row>
+   <row>
+      <Name>Kino Polska Muzyka</Name>
+      <Short.name>Kino Polska Muz</Short.name>
+      <Previous.name>Kino Polska Muzyka</Previous.name>
+   </row>
+   <row>
+      <Name>TVR</Name>
+      <Short.name>TVR</Short.name>
+      <Previous.name>TVR</Previous.name>
+   </row>
+   <row>
+      <Name>EDUSAT</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>EDUSAT</Previous.name>
+   </row>
+   <row>
+      <Name>Boomerang</Name>
+      <Short.name>Boomerang</Short.name>
+      <Previous.name>Boomerang</Previous.name>
+   </row>
+   <row>
+      <Name>Cartoon Network</Name>
+      <Short.name>Cartoon</Short.name>
+      <Previous.name>Cartoon Network</Previous.name>
+   </row>
+   <row>
+      <Name>AXN Spin</Name>
+      <Short.name>AXN Spin</Short.name>
+      <Previous.name>AXN Spin</Previous.name>
+   </row>
+   <row>
+      <Name>STARS.TV</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>Stars.tv</Previous.name>
+   </row>
+   <row>
+      <Name>technical support fee</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>Romance TV</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>Power TV</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>123sat</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>Al Jazeera</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>Al Jazeera International</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>Animal Planet</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>Animal Planet</Previous.name>
+   </row>
+   <row>
+      <Name>Animal Planet HD</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>Ann</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>ARD 1</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>Arirang</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>Arte</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>Baby TV</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>BBC HD</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>BBC World</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>Bloomberg</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>Canal+ Film</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>Canal+ Film</Previous.name>
+   </row>
+   <row>
+      <Name>Canal+ Weekend</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>Canal+ Family [Canal+ Weekend]</Previous.name>
+   </row>
+   <row>
+      <Name>CCTV 9</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>Cinemax 2\Cinemax 2 HD</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>Cinemax\Cinemax HD</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>CNBC</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>CNN</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>CTV 1</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>Da Vinci Learning</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>Discovery</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>Discovery</Previous.name>
+   </row>
+   <row>
+      <Name>Discovery HD</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>Discovery Historia</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>Discovery Historia</Previous.name>
+   </row>
+   <row>
+      <Name>Discovery Science [Discovery Sci-Trek]</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>Discovery Science [Discovery Sci-Trek]</Previous.name>
+   </row>
+   <row>
+      <Name>Discovery World</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>Discovery World</Previous.name>
+   </row>
+   <row>
+      <Name>DW</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>ESPN Classic Sport</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>Euronews</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>Eurosport</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>Eurosport</Previous.name>
+   </row>
+   <row>
+      <Name>Eurosport 2\Eurosport 2 HD</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>EWTN</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>Explorer Viasat</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>Polsat Viasat Explorer [Viasat Explorer]</Previous.name>
+   </row>
+   <row>
+      <Name>Fashion</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>Fashion HD</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>Filmbox Extra</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>Filmbox Family</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>Filmbox HD</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>France 24 Arabski</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>France 24 Eng</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>France 24 Fra</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>Galeria UPC</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>HBO Comedy\HBO Comedy HD</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>HBO\HBO HD</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>HBO2\HBO2 HD</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>History Viasat</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>Polsat Viasat History [Viasat History]</Previous.name>
+   </row>
+   <row>
+      <Name>Investigation Discovery</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>Investigation Discovery</Previous.name>
+   </row>
+   <row>
+      <Name>Kabel1</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>KBS World</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>Mango24</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>Mango24</Previous.name>
+   </row>
+   <row>
+      <Name>Mezzo</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>MGM Movies\MGM Movies HD</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>MGM</Previous.name>
+   </row>
+   <row>
+      <Name>MTV Dance</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>MTV Hits</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>MTV Live HD</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>MTV niem.</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>MTV Rocks</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>NASN/ESPN</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>National Geographic Music</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>National Geographic Wild HD</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>Nickelodeon HD</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>Nickelodeon HD</Previous.name>
+   </row>
+   <row>
+      <Name>nPremium</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>nPremium2</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>nPremium3</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>nPremium4</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>Orange Sport (stary)</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>Polonia1</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>Polonia1</Previous.name>
+   </row>
+   <row>
+      <Name>Polsat</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>Polsat</Previous.name>
+   </row>
+   <row>
+      <Name>Polsat Cafe</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>Polsat Cafe</Previous.name>
+   </row>
+   <row>
+      <Name>Polsat Crime &amp; Investigation Network</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>Polsat Crime &amp; Investigation Network</Previous.name>
+   </row>
+   <row>
+      <Name>Polsat Film</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>Polsat Film</Previous.name>
+   </row>
+   <row>
+      <Name>Polsat Futbol</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>Polsat Futbol</Previous.name>
+   </row>
+   <row>
+      <Name>Polsat News</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>Polsat News</Previous.name>
+   </row>
+   <row>
+      <Name>Polsat Play</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>Polsat Play</Previous.name>
+   </row>
+   <row>
+      <Name>Polsat Sport</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>Polsat Sport</Previous.name>
+   </row>
+   <row>
+      <Name>Polsat Sport Extra</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>Polsat Sport Extra</Previous.name>
+   </row>
+   <row>
+      <Name>Polsat Sport HD</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>Polsat Sport News</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>Polsat Sport News</Previous.name>
+   </row>
+   <row>
+      <Name>Polsat2</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>Polsat2</Previous.name>
+   </row>
+   <row>
+      <Name>PRO 7</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>RAI DUE</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>Rai News 24</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>RAI TRE</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>RAI UNO</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>RaiSport</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>Religia.tv</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>Religia.tv</Previous.name>
+   </row>
+   <row>
+      <Name>RTL</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>RTL 2</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>RTL102,5</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>RTP</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>RTR Planeta</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>Russia 1</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>SAT 1</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>Sat2000</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>Sport 1</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>Sportklub+</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>Super RTL</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>TLC</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>TLC</Previous.name>
+   </row>
+   <row>
+      <Name>Travel Channel HD</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>TV 1000</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>TV Moda</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>TV Nova</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>TV Trwam</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>TV.DISCO</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>TV.DISCO</Previous.name>
+   </row>
+   <row>
+      <Name>TV4</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>TV4</Previous.name>
+   </row>
+   <row>
+      <Name>TV5</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>TV6</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>TV6</Previous.name>
+   </row>
+   <row>
+      <Name>TVE</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>TVN</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>TVN</Previous.name>
+   </row>
+   <row>
+      <Name>TVN CNBC</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>TVN Meteo</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>TVN Meteo</Previous.name>
+   </row>
+   <row>
+      <Name>TVN Style</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>TVN Style</Previous.name>
+   </row>
+   <row>
+      <Name>TVN Turbo</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>TVN Turbo</Previous.name>
+   </row>
+   <row>
+      <Name>TVN Warszawa</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>TVN+1</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>TVN+1</Previous.name>
+   </row>
+   <row>
+      <Name>TVN24</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>TVN24</Previous.name>
+   </row>
+   <row>
+      <Name>TVN7 [RTL7]</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>TVN7 [RTL7]</Previous.name>
+   </row>
+   <row>
+      <Name />
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>TVP Bydgoszcz</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>TVP Gda</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>TVP Gorz&#xf770c;ubuska</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>TVP HD</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>TVP HD</Previous.name>
+   </row>
+   <row>
+      <Name>TVP Historia</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>TVP Historia</Previous.name>
+   </row>
+   <row>
+      <Name>TVP INFO [TVP3]</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>TVP INFO [TVP3]</Previous.name>
+   </row>
+   <row>
+      <Name>TVP Katowice</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>TVP Kielce</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>TVP Krak</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>TVP Kultura</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>TVP Kultura</Previous.name>
+   </row>
+   <row>
+      <Name>TVP Lublin</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name />
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>TVP Olsztyn</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>TVP Opole</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>TVP Polonia</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>TVP Polonia</Previous.name>
+   </row>
+   <row>
+      <Name>TVP Pozna</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>TVP Rzesz</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>TVP Seriale</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>TVP Seriale</Previous.name>
+   </row>
+   <row>
+      <Name>TVP Sport</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>TVP Sport</Previous.name>
+   </row>
+   <row>
+      <Name>TVP Szczecin</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>TVP Warszawa</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name />
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>TVP1</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>TVP1</Previous.name>
+   </row>
+   <row>
+      <Name>TVP2</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>TVP2</Previous.name>
+   </row>
+   <row>
+      <Name>VH1 Classic</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>VH1 Classic</Previous.name>
+   </row>
+   <row>
+      <Name>VIVA (German)</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>VIVA (German)</Previous.name>
+   </row>
+   <row>
+      <Name>VOX</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>Water Planet [CSB TV]</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>Water Planet [CSB TV]</Previous.name>
+   </row>
+   <row>
+      <Name>Wielkopolska TVK</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>Wojna i Pok</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>Wojna i Pok</Previous.name>
+   </row>
+   <row>
+      <Name>ZDF</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>3 SAT</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>Baby First</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>CTV 2</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>KidsCo</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>Patio.TV</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>SKY NEWS</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>STV 1</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>STV 2</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>9live</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>Airbox</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>BR 3</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>BR Alpha</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>Comedy Central niem</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>Das Vierte</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>Hessen</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>Kinder Kanal</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>Magic</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>MDR</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>N24</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>NDR</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>N-TV</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>Phoenix</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>TVN Lingua</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>TVT Rybnik</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>WDR</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>Duna TV</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>M6</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>MCM</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>MCM top</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>Podr&#xff960;TV</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>promocja.tv</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name />
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>TVN Gra</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>aMazing</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>ATM Rozrywka</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>ATM Rozrywka</Previous.name>
+   </row>
+   <row>
+      <Name>Fightbox</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>Fightklub</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>History Channel HD</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>Kosmica TV</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>Nature Viasat</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>Polsat Viasat Nature [Viasat Nature]</Previous.name>
+   </row>
+   <row>
+      <Name>Puls 2</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>Puls 2</Previous.name>
+   </row>
+   <row>
+      <Name>RT Russia Today</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>Sundance Channel HD</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>TTV - Twoja Telewizja</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>TTV - Twoja Telewizja</Previous.name>
+   </row>
+   <row>
+      <Name>Filmbox Action</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+   <row>
+      <Name>nSport</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>nSport</Previous.name>
+   </row>
+   <row>
+      <Name>Polsat Food</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>Polsat Food</Previous.name>
+   </row>
+   <row>
+      <Name>Nick Jr</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>Nick Jr</Previous.name>
+   </row>
+   <row>
+      <Name>Canal+ Film 2</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>Canal+ Film 2</Previous.name>
+   </row>
+   <row>
+      <Name>Polsat Biznes</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>Polsat Biznes [TV Biznes]</Previous.name>
+   </row>
+   <row>
+      <Name>TVP Rozrywka</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>TVP Rozrywka</Previous.name>
+   </row>
+   <row>
+      <Name>Zone Romantica</Name>
+      <Short.name>NA</Short.name>
+      <Previous.name>NA</Previous.name>
+   </row>
+</document>

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace DatabaseProject.DtoModel
 {
-    public class StationDTO
+    public class ChannelDto
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
+        public int id { get; set; }
+        public string name { get; set; }
     }
 }

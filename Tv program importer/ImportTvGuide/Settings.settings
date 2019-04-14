@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="TvGuideURL" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">https://www.telemagazyn.pl/tvp_1/?dzien=2016-04-27#program</Value>
+      <Value Profile="(Default)">https://www.telemagazyn.pl/canal_sport/?dzien=2012-04-10#program</Value>
     </Setting>
     <Setting Name="TimeStartRegex" Type="System.String" Scope="Application">
       <Value Profile="(Default)"> &lt;span&gt;.*\n\s+&lt;em&gt;\s+([0-9]{1,2}:[0-9]{1,2})</Value>
@@ -15,10 +15,10 @@
       <Value Profile="(Default)">"genre" content="(.*?)"</Value>
     </Setting>
     <Setting Name="StartDate" Type="System.DateTime" Scope="Application">
-      <Value Profile="(Default)">2016-04-27</Value>
+      <Value Profile="(Default)">2012-04-10</Value>
     </Setting>
     <Setting Name="EndDate" Type="System.DateTime" Scope="Application">
-      <Value Profile="(Default)">2016-04-28</Value>
+      <Value Profile="(Default)">2012-04-10</Value>
     </Setting>
     <Setting Name="DurationRegex" Type="System.String" Scope="Application">
       <Value Profile="(Default)"> &lt;span&gt;Czas trwania: &lt;/span&gt;&lt;meta itemprop="timeRequired" content="([0-9]*)</Value>

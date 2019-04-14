@@ -12,11 +12,11 @@ namespace ImportTvGuide.Http_import
 {
     public class TvGuideParser
     {
-        private List<ProgramTypeDTO> programTypes = new List<ProgramTypeDTO>();
+        private List<ProgramTypeDto> programTypes = new List<ProgramTypeDto>();
 
-        public List<ProgramTvDTO> GetTvProgramList()
+        public List<ProgramTvDto> GetTvProgramList()
         {
-            List<ProgramTvDTO> programList = new List<ProgramTvDTO>();
+            List<ProgramTvDto> programList = new List<ProgramTvDto>();
             string url = Settings.Default.TvGuideURL;
             DateTime prevDate;
 
@@ -28,12 +28,12 @@ namespace ImportTvGuide.Http_import
             return programList;
         }
 
-        private List<ProgramTvDTO> GetProgramFromOneDay(string url, DateTime currentDate)
+        private List<ProgramTvDto> GetProgramFromOneDay(string url, DateTime currentDate)
         {
-            List<ProgramTvDTO> programList = new List<ProgramTvDTO>();
+            List<ProgramTvDto> programList = new List<ProgramTvDto>();
             string html = HtmlImporter.GetHtml(url);
             string detailLink, detailURL;
-            ProgramTvDTO programTv = new ProgramTvDTO();
+            ProgramTvDto programTv = new ProgramTvDto();
             Regex regexDetailLink = new Regex(Settings.Default.DetailLink);
             MatchCollection matchDetailsLinks = regexDetailLink.Matches(html);
             Regex regexTimeStarts = new Regex(Settings.Default.TimeStartRegex);
@@ -44,16 +44,16 @@ namespace ImportTvGuide.Http_import
             /*iterujemy od 1 bo na 1 pozycji zbędny element*/
             for (int i = 1; i < matchDetailsLinks.Count; i++)
             {
-                programTv = new ProgramTvDTO();
+                programTv = new ProgramTvDto();
                 //godzina staru
                 prevProgramTime = programTime;
                 programTime = TimeSpan.Parse(matchTimeStarts[i - 1].Result("$1"));
                 if (isNextDay && !isDayAdded && currentDate.Add(programTime.Subtract(prevProgramTime)).Hour < 12)
                 {
-                    programTv.StartDate = currentDate = currentDate.AddDays(1);
+                    programTv.start_date = currentDate = currentDate.AddDays(1);
                     isDayAdded = true;
                 }
-                programTv.StartDate = currentDate = currentDate.Add(programTime.Subtract(prevProgramTime));
+                programTv.start_date = currentDate = currentDate.Add(programTime.Subtract(prevProgramTime));
 
                 if (currentDate.Hour > 12)
                     isNextDay = true;
@@ -66,7 +66,7 @@ namespace ImportTvGuide.Http_import
             return programList;
         }
 
-        private void FillProgramWithDataFromDetailLink(string Url, ProgramTvDTO programTv, bool isNextDay)
+        private void FillProgramWithDataFromDetailLink(string Url, ProgramTvDto programTv, bool isNextDay)
         {
             string detailHtml = HtmlImporter.GetHtml(Url);
             Regex regexNames = new Regex(Settings.Default.NameRegex);
@@ -75,11 +75,11 @@ namespace ImportTvGuide.Http_import
             MatchCollection matchTypes = regexTypes.Matches(detailHtml);
             Regex regexDuration = new Regex(Settings.Default.DurationRegex);
             MatchCollection matchesDuration = regexDuration.Matches(detailHtml);
-            programTv.Name = matchNames[0].Result("$1");
+            programTv.name = matchNames[0].Result("$1");
             if (matchTypes.Count > 0)
-                programTv.Type = new ProgramTypeDTO() { Name = matchTypes[0].Result("$1") };
+                programTv.type_name = matchTypes[0].Result("$1");
             else
-                programTv.Type = new ProgramTypeDTO() { Name = "Brak" };
+                programTv.type_name = "Brak";
         }
     }
 }

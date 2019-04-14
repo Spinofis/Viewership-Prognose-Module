@@ -14,14 +14,10 @@ namespace DatabaseProject.DbModel
             Program_tv = new HashSet<Program_tv>();
         }
 
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int prt_id { get; set; }
+        public int id { get; set; }
 
-        [StringLength(100)]
-        public string prt_name { get; set; }
-
-        public DateTime aud_data { get; set; }
+        [StringLength(50)]
+        public string name { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Program_tv> Program_tv { get; set; }

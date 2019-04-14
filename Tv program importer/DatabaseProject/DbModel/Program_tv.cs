@@ -8,25 +8,21 @@ namespace DatabaseProject.DbModel
 
     public partial class Program_tv
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int pr_id { get; set; }
+        public int id { get; set; }
 
-        public int pr_prt_id { get; set; }
+        public int? id_prg_type { get; set; }
 
-        public int pr_sta_id { get; set; }
+        public int? id_chan { get; set; }
 
-        [StringLength(100)]
-        public string pr_name { get; set; }
+        [StringLength(50)]
+        public string name { get; set; }
 
-        public DateTime? pr_start_date { get; set; }
+        public DateTime? start_date { get; set; }
 
-        public DateTime? pr_end_date { get; set; }
+        public DateTime? end_date { get; set; }
 
-        public DateTime aud_data { get; set; }
+        public virtual Channels Channels { get; set; }
 
         public virtual Program_type Program_type { get; set; }
-
-        public virtual Station Station { get; set; }
     }
 }

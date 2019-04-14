@@ -54,15 +54,13 @@
   <ItemGroup>
     <Compile Include="AutoMapperInitializer.cs" />
     <Compile Include="DbLogic\DbLogic.cs" />
-    <Compile Include="DbModel\Model.cs" />
+    <Compile Include="DbModel\Channels.cs" />
+    <Compile Include="DbModel\Model2.cs" />
     <Compile Include="DbModel\Program_tv.cs" />
     <Compile Include="DbModel\Program_type.cs" />
-    <Compile Include="DbModel\Station.cs" />
-    <Compile Include="DbModel\sysdiagrams.cs" />
-    <Compile Include="DbModel\Weather.cs" />
-    <Compile Include="DtoModel\ProgramTvDTO.cs" />
-    <Compile Include="DtoModel\ProgramTypeDTO.cs" />
-    <Compile Include="DtoModel\StationDTO.cs" />
+    <Compile Include="DtoModel\ProgramTvDto.cs" />
+    <Compile Include="DtoModel\ProgramTypeDto.cs" />
+    <Compile Include="DtoModel\ChannelDto.cs" />
     <Compile Include="Migrations\201805271113455_InitialCreate.cs" />
     <Compile Include="Migrations\201805271113455_InitialCreate.Designer.cs">
       <DependentUpon>201805271113455_InitialCreate.cs</DependentUpon>
@@ -86,5 +84,6 @@
       <DependentUpon>201805271116100_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

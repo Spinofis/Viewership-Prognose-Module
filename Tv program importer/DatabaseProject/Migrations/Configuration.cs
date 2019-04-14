@@ -5,7 +5,7 @@ namespace DatabaseProject.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<DatabaseProject.DbModel.Model>
+    internal sealed class Configuration : DbMigrationsConfiguration<DatabaseProject.DbModel.Model2>
     {
         public Configuration()
         {
@@ -13,7 +13,7 @@ namespace DatabaseProject.Migrations
             ContextKey = "DatabaseProject.DbModel.Model";
         }
 
-        protected override void Seed(DatabaseProject.DbModel.Model context)
+        protected override void Seed(DatabaseProject.DbModel.Model2 context)
         {
             //  This method will be called after migrating to the latest version.
 

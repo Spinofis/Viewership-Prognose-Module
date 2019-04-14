@@ -6,18 +6,19 @@ using System.Threading.Tasks;
 
 namespace DatabaseProject.DtoModel
 {
-    public class ProgramTvDTO
+    public class ProgramTvDto
     {
-        public int Id { get; set; }
+        public int id { get; set; }
 
-        public string Name { get; set; }
+        public int? id_prg_type { get; set; }
 
-        public DateTime StartDate { get; set; }
+        public int? id_chan { get; set; }
 
-        public DateTime EndDate { get; set; }
+        public string name { get; set; }
+        public string type_name { get; set; }
 
-        public virtual ProgramTypeDTO Type { get; set; }
+        public DateTime? start_date { get; set; }
 
-        public virtual StationDTO Station { get; set; }
+        public DateTime? end_date { get; set; }
     }
 }

@@ -17,6 +17,7 @@ namespace DatabaseProject.DtoModel
         public string name { get; set; }
         public string type_name { get; set; }
 
+
         public DateTime? start_date { get; set; }
 
         public DateTime? end_date { get; set; }

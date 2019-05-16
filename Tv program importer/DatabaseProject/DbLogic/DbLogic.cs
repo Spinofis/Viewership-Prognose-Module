@@ -11,6 +11,19 @@ namespace DatabaseProject.DbLogic
 {
     public class DbLogic
     {
+
+        public List<ChannelDto> GetChannelsList()
+        {
+            using (var context = new Model2())
+            {
+                var result = context
+                    .Channels
+                    .Select(x => x)
+                    .Where(x => !string.IsNullOrEmpty(x.program_url))
+                    .ToList();
+                return Mapper.Map<List<Channels>, List<ChannelDto>>(result);
+            }
+        }
         public ICollection<ProgramTypeDto> GetProgramTypes()
         {
             using (var context = new Model2())
@@ -32,8 +45,15 @@ namespace DatabaseProject.DbLogic
                     {
                         foreach (ProgramTypeDto programTypeDTO in programTypes)
                         {
-                            Program_type program_Type = Mapper.Map<ProgramTypeDto, Program_type>(programTypeDTO);
-                            context.Program_type.Add(program_Type);
+                            Program_type program_Type = context
+                                .Program_type
+                                .Where(x => x.name.Equals(programTypeDTO.name))
+                                .FirstOrDefault();
+                            if (program_Type == null)
+                            {
+                                program_Type = Mapper.Map<ProgramTypeDto, Program_type>(programTypeDTO);
+                                context.Program_type.Add(program_Type);
+                            }
                         }
                         context.SaveChanges();
                         tran.Commit();
@@ -74,6 +94,21 @@ namespace DatabaseProject.DbLogic
                         throw ex;
                     }
                 }
+            }
+        }
+
+        public void DeleteProgramsWithIncorrectEndDate()
+        {
+            using (var context = new Model2())
+            {
+
+                var programsToDelete = context
+                    .Program_tv
+                    .Where(x => ((DateTime)x.end_date).Year == 2100)
+                    .ToList();
+                programsToDelete
+                    .ForEach(x => context.Program_tv.Remove(x));
+                context.SaveChanges();
             }
         }
     }

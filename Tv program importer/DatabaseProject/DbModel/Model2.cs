@@ -23,6 +23,10 @@ namespace DatabaseProject.DbModel
                 .IsUnicode(false);
 
             modelBuilder.Entity<Channels>()
+                .Property(e => e.program_url)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Channels>()
                 .HasMany(e => e.Program_tv)
                 .WithOptional(e => e.Channels)
                 .HasForeignKey(e => e.id_chan);

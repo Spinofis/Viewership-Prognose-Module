@@ -19,6 +19,7 @@ namespace DatabaseProject
                 cfg.CreateMap<ProgramTvDto, Program_tv>();
                 cfg.CreateMap<Program_type, ProgramTypeDto>();
                 cfg.CreateMap<ProgramTypeDto, Program_type>();
+                cfg.CreateMap<List<ChannelDto>, List<Channels>>();
             });
         }
     }

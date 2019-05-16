@@ -12,18 +12,24 @@ namespace ImportTvGuide.Http_import
 {
     public class TvGuideParser
     {
+        public int ChannelId { get; set; }
+        public string Url { get; set; }
         private List<ProgramTypeDto> programTypes = new List<ProgramTypeDto>();
 
-        public List<ProgramTvDto> GetTvProgramList()
-        {
-            List<ProgramTvDto> programList = new List<ProgramTvDto>();
-            string url = Settings.Default.TvGuideURL;
-            DateTime prevDate;
 
+        public List<ProgramTvDto> GetTvProgramList(int channelId, string url)
+        {
+            this.ChannelId = channelId;
+            this.Url = url;
+            List<ProgramTvDto> programList = new List<ProgramTvDto>();
+            DateTime prevDate;
+            int i = 0;
             for (DateTime currentDate = Settings.Default.StartDate; currentDate <= Settings.Default.EndDate; currentDate = currentDate.AddDays(1))
             {
-                programList.AddRange(GetProgramFromOneDay(url, currentDate.Date));
-                url = url.Replace(currentDate.ToString("yyyy-MM-dd"), currentDate.AddDays(1).ToString("yyy-MM-dd"));
+                programList.AddRange(GetProgramFromOneDay(Url, currentDate.Date));
+                //if (i % 30 == 0 && i != 0)
+                Url = Url.Replace(currentDate.ToString("yyyy-MM-dd"), currentDate.AddDays(1).ToString("yyy-MM-dd"));
+                Console.WriteLine("Channel {0} processed {1} days", ChannelId, i++);
             }
             return programList;
         }
@@ -62,6 +68,7 @@ namespace ImportTvGuide.Http_import
                 detailLink = matchDetailsLinks[i].Result("$2");
                 detailURL = string.Concat(Settings.Default.BaseUrl, detailLink);
                 FillProgramWithDataFromDetailLink(detailURL, programTv, isNextDay);
+                programTv.id_chan = ChannelId;
             }
             return programList;
         }

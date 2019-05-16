@@ -14,7 +14,6 @@ namespace DatabaseProject.DbModel
 
         public int? id_chan { get; set; }
 
-        [StringLength(50)]
         public string name { get; set; }
 
         public DateTime? start_date { get; set; }

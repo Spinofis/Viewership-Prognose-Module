@@ -14,15 +14,24 @@ namespace ImportTvGuide
     {
         static void Main(string[] args)
         {
-            AutoMapperInitializer.InitializeMapping();
-            TvGuideImporter tvGuideImporter = new TvGuideImporter();
-            Console.WriteLine("Import started. Time:" + DateTime.Now);
-            tvGuideImporter.RunImport();
-            Console.WriteLine("Tv guide parsed. Time:" + DateTime.Now + " Program count: " + tvGuideImporter.programs.Count);
-            //string content = string.Join("\n", tvGuideImporter.programs.Select(x => x.start_date));
-            //File.WriteAllText(@"C:\Users\Bartek\Desktop\tv.txt", content);
-            Console.WriteLine("Press any key...");
-            Console.ReadKey();
+            try
+            {
+                AutoMapperInitializer.InitializeMapping();
+                TvGuideImporter tvGuideImporter = new TvGuideImporter();
+                Console.WriteLine("Import started. Time:" + DateTime.Now);
+                //Console.WriteLine("Importing channel:" + Settings.Default.ChannelName);
+                tvGuideImporter.RunImport();
+                //Console.WriteLine("Tv guide parsed. Time:" + DateTime.Now + " Program count: " + tvGuideImporter.programs.Count);
+                //string content = string.Join("\n", tvGuideImporter.programs.Select(x => x.start_date));
+                //File.WriteAllText(@"C:\Users\Bartek\Desktop\tv.txt", content);
+                Console.ReadLine();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                Console.WriteLine("Press any key...");
+                Console.ReadKey();
+            }
         }
     }
 }

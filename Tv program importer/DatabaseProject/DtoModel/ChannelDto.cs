@@ -10,5 +10,7 @@ namespace DatabaseProject.DtoModel
     {
         public int id { get; set; }
         public string name { get; set; }
+        public string program_url { get; set; }
+
     }
 }

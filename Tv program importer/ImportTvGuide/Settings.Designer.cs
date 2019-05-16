@@ -25,15 +25,6 @@ namespace ImportTvGuide {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://www.telemagazyn.pl/canal_sport/?dzien=2012-04-10#program")]
-        public string TvGuideURL {
-            get {
-                return ((string)(this["TvGuideURL"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute(" <span>.*\\n\\s+<em>\\s+([0-9]{1,2}:[0-9]{1,2})")]
         public string TimeStartRegex {
             get {
@@ -61,7 +52,7 @@ namespace ImportTvGuide {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("2012-04-10")]
+        [global::System.Configuration.DefaultSettingValueAttribute("2011-12-31")]
         public global::System.DateTime StartDate {
             get {
                 return ((global::System.DateTime)(this["StartDate"]));
@@ -70,7 +61,7 @@ namespace ImportTvGuide {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("2012-04-10")]
+        [global::System.Configuration.DefaultSettingValueAttribute("2011-12-31")]
         public global::System.DateTime EndDate {
             get {
                 return ((global::System.DateTime)(this["EndDate"]));

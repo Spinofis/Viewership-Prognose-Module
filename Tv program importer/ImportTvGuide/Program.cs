@@ -19,11 +19,7 @@ namespace ImportTvGuide
                 AutoMapperInitializer.InitializeMapping();
                 TvGuideImporter tvGuideImporter = new TvGuideImporter();
                 Console.WriteLine("Import started. Time:" + DateTime.Now);
-                //Console.WriteLine("Importing channel:" + Settings.Default.ChannelName);
                 tvGuideImporter.RunImport();
-                //Console.WriteLine("Tv guide parsed. Time:" + DateTime.Now + " Program count: " + tvGuideImporter.programs.Count);
-                //string content = string.Join("\n", tvGuideImporter.programs.Select(x => x.start_date));
-                //File.WriteAllText(@"C:\Users\Bartek\Desktop\tv.txt", content);
                 Console.ReadLine();
             }
             catch (Exception ex)
